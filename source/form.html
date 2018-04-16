@@ -26,8 +26,8 @@
       </nav>
     </header>
     <main class="main">
-      <h1 class="main__title">Подбор программы</h1>
-      <form class="form main__form" action="https://echo.htmlacademy.ru">
+      <form class="form main__form" action="https://echo.htmlacademy.ru" method="post">
+        <h1 class="form__title main__title">Подбор программы</h1>
         <p class="form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
         <div class="form__wrapper">
           <label class="form__label">Имя:*
@@ -54,8 +54,8 @@
             <span class="form__radio">Не знаю (нужен ваш совет)</span>
           </label>
         </div>
-        <h3 class="form__title">Контактные данные (владельца кота)</h3>
         <div class="form__wrapper">
+          <h2 class="form__title">Контактные данные (владельца кота)</h2>
           <label class="form__label">E-mail:*
             <input class="form__input" type="email" name="email" placeholder="kuklachev@gmail.com" required>
           </label>
@@ -91,21 +91,21 @@
         <button class="button" type="submit">Отправить заявку</button>
         <span class="form__required">* — Обязательные поля</span>
       </form>
-    </main>
-    <footer class="footer">
-      <section class="contacts footer__contacts">
+      <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <p class="contacts__title">приглашаем к сотрудничеству дилеров!</p>
         <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </section>
-      <section class="map footer__map">
+      <section class="map">
         <h2 class="visually-hidden">Карта</h2>
       </section>
+    </main>
+    <footer class="footer">
+      <div class="logo footer__logo">
+        <img class="logo__icon" src="http://placehold.it/150x100" width="128" height="24" alt="Логотип">
+      </div>
       <section class="social footer__social">
         <h2 class="visually-hidden">Соцсети</h2>
-        <div class="social__logo">
-          <img class="logo__icon" src="http://placehold.it/150x100" width="128" height="24" alt="Логотип">
-        </div>
         <ul class="social__list">
           <li class="social__item"><a class="social__link" href="#">Вконтакте</a></li>
           <li class="social__item"><a class="social__link" href="#">Инстаграм</a></li>

@@ -26,8 +26,8 @@
       </nav>
     </header>
     <main class="main">
-      <h1 class="main__title">Каталог продукции</h1>
       <section class="catalog">
+        <h1 class="catalog__title main__title">Каталог продукции</h1>
         <ul class="catalog__list">
           <li class="catalog__item">
             <a class="catalog__image" href="#">
@@ -192,7 +192,7 @@
           </li>
           <li class="catalog__item">
             <h3 class="catalog__title"><a href="#">Показать еще 100500 товаров</a></h3>
-            <p>На самом деле вкусов гораздо больше!</p>
+            <p class="catalog__text catalog__text--small">На самом деле вкусов гораздо больше!</p>
             <a class="button button--grey" href="#">Показать все</a>
           </li>
         </ul>
@@ -229,21 +229,21 @@
           </p>
         </div>
       </section>
-    </main>
-    <footer class="footer">
-      <section class="contacts footer__contacts">
+      <section class="contacts">
         <h2 class="visually-hidden">Контакты</h2>
         <p class="contacts__title">приглашаем к сотрудничеству дилеров!</p>
         <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </section>
-      <section class="map footer__map">
+      <section class="map">
         <h2 class="visually-hidden">Карта</h2>
       </section>
+    </main>
+    <footer class="footer">
+      <div class="logo footer__logo">
+        <img class="logo__icon" src="http://placehold.it/150x100" width="128" height="24" alt="Логотип">
+      </div>
       <section class="social footer__social">
         <h2 class="visually-hidden">Соцсети</h2>
-        <div class="social__logo">
-          <img class="logo__icon" src="http://placehold.it/150x100" width="128" height="24" alt="Логотип">
-        </div>
         <ul class="social__list">
           <li class="social__item"><a class="social__link" href="#">Вконтакте</a></li>
           <li class="social__item"><a class="social__link" href="#">Инстаграм</a></li>
