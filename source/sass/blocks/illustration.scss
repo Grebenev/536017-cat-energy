@@ -1,0 +1,18 @@
+.illustration {
+  background-color: $grey-1;
+}
+
+.illustration__title {
+  line-height: 1.67;
+  margin-bottom: 30px;
+}
+
+.illustration__description {
+  font-family: "Arial", sans-serif;
+}
+
+.illustration__expenses {
+  line-height: 1.43;
+  text-transform: uppercase;
+  color: $dark-3;
+}

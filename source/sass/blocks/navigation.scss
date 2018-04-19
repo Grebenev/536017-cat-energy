@@ -1,0 +1,15 @@
+.navigation__list {
+  margin: 0;
+  padding: 0;
+
+  @include font(20, 1, 500);
+  text-transform: uppercase;
+  list-style: none;
+  text-align: center;
+}
+
+.navigation__item {
+  padding: 22px 20px;
+  color: $dark-3;
+  border-bottom: 1px solid $grey-2;
+}

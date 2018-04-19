@@ -1,0 +1,9 @@
+.count__title {
+  @include font(24, 1);
+  color: $dark-3;
+}
+
+.count__text {
+  @include font(12, 1);
+  font-family: "Arial", sans-serif;
+}

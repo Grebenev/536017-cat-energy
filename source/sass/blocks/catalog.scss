@@ -1,0 +1,60 @@
+.catalog {
+  .button {
+    margin-bottom: 15px;
+  }
+}
+
+.catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.catalog__item {
+  margin-bottom: 25px;
+  border-bottom: 1px solid $grey-2;
+}
+
+.catalog__product {
+  margin: 0;
+  padding: 15px 0;
+
+  @include font(16, 1.25);
+  color: $dark-3;
+  text-transform: uppercase;
+}
+
+.catalog__cell {
+  margin: 0;
+  padding: 0;
+
+  @include font(12, 1.33);
+  font-family: "Arial", sans-serif;
+}
+
+.catalog__text {
+  display: inline-block;
+  padding-bottom: 15px;
+
+  @include font(14, 1);
+  font-family: "Arial", sans-serif;
+}
+
+.catalog__additional {
+  margin: 0;
+  padding: 25px 0;
+}
+
+.catalog__bonus {
+  min-height: 289px;
+
+  @include b-image($green-1, "gift-photo-mobile@1x.jpg");
+}
+
+.catalog__action {
+  @include font(16, 1.25);
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  color: #ffffff;
+}

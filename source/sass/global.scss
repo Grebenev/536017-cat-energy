@@ -1,0 +1,64 @@
+body {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", "Arial", sans-serif;
+
+  @include font(14, 1.29);
+  color: $dark-1;
+  background-color: #ffffff;
+  box-shadow: inset 0 0 0 1px blue;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.main__wrapper {
+  padding: 0 20px;
+}
+
+.title {
+  margin: 0;
+  padding: 20px 0;
+  color: $dark-3;
+  text-align: center;
+
+  @include font(36, 1.67);
+
+  &--white {
+    padding: 10px 0;
+    line-height: 1;
+    color: #ffffff;
+  }
+}
+
+.title-stripe {
+  @include font(24, 1);
+}
+
+// Временно для подсветки блоков
+.basic,
+.catalog,
+.contacts,
+.footer,
+.form,
+.function,
+.illustration,
+.map,
+.navigation,
+.programs {
+  box-shadow: inset 0 0 0 1px black;
+}

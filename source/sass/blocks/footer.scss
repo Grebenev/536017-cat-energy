@@ -1,0 +1,9 @@
+.footer__logo {
+  padding: 40px 0 30px;
+  text-align: center;
+}
+
+.footer__text {
+  @include font(16, 1);
+  font-family: "Arial", sans-serif;
+}
