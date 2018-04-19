@@ -1,0 +1,19 @@
+.contacts {
+  padding-top: 30px;
+  padding-bottom: 25px;
+}
+
+.contacts__title {
+  padding: 0;
+  margin: 0;
+
+  @include font(16, 1.25);
+  color: $dark-3;
+}
+
+.contacts__text {
+  padding: 0;
+  margin: 0;
+  line-height: 1.43;
+  font-family: "Arial", sans-serif;
+}

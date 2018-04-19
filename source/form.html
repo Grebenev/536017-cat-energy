@@ -3,33 +3,33 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Кэт энерджи</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
       <nav class="navigation">
-        <a class="logo navigation__logo">
-          <img class="logo__icon" src="http://placehold.it/150x100" width="33" height="40" alt="Логотип">
-          <img class="logo__name" src="http://placehold.it/150x100" width="101" height="18" alt="Кэт энерджи">
+        <a class="navigation__logo">
+          <img class="navigation__icon" src="img/logo-mobile.svg" width="191" height="40" alt="Логотип">
         </a>
         <button class="navigation__toggle" type="button"></button>
         <ul class="navigation__list">
-          <li class="navigation__item navigation__item--active">
-            <a class="navigation__link">Главная</a>
+          <li class="navigation__item">
+            <a class="navigation__link" href="index.html">Главная</a>
           </li>
           <li class="navigation__item">
             <a class="navigation__link" href="catalog.html">Каталог продукции</a>
           </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="form.html">Подбор программы</a>
+          <li class="navigation__item navigation__item--active">
+            <a class="navigation__link">Подбор программы</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="main">
       <form class="form main__form" action="https://echo.htmlacademy.ru" method="post">
-        <h1 class="form__title title">Подбор программы</h1>
-        <p class="form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
-        <div class="form__wrapper">
+        <div class="form__wrapper main__wrapper">
+          <h1 class="title">Подбор программы</h1>
+          <p class="form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
           <label class="form__label">Имя:*
             <input class="form__input" type="text" name="name" placeholder="Барсик" required>
           </label>
@@ -40,58 +40,70 @@
             <input class="form__input" type="text" name="age" placeholder="7">
           </label>
         </div>
-        <div class="form__wrapper">
-          <label class="form__label">
-            <input class="visually-hidden" type="radio" name="program" value="slim">
-            <span class="form__radio">Похудение</span>
-          </label>
-          <label class="form__label">
-            <input class="visually-hidden" type="radio" name="program" value="pro">
-            <span class="form__radio">Набор массы</span>
-          </label>
-          <label class="form__label">
-            <input class="visually-hidden" type="radio" name="program" value="unknown">
-            <span class="form__radio">Не знаю (нужен ваш совет)</span>
-          </label>
-        </div>
-        <div class="form__wrapper">
-          <h2 class="form__title">Контактные данные (владельца кота)</h2>
+        <ul class="form__list form__list--border">
+          <li class="form__item">
+            <label class="form__label">
+              <input class="visually-hidden" type="radio" name="program" value="slim">
+              <span class="form__radio">Похудение</span>
+            </label>
+          </li>
+          <li class="form__item">
+            <label class="form__label">
+              <input class="visually-hidden" type="radio" name="program" value="pro">
+              <span class="form__radio">Набор массы</span>
+            </label>
+          </li>
+          <li class="form__item">
+            <label class="form__label">
+              <input class="visually-hidden" type="radio" name="program" value="unknown">
+              <span class="form__radio">Не знаю (нужен ваш совет)</span>
+            </label>
+          </li>
+        </ul>
+        <div class="form__wrapper main__wrapper">
+          <h2 class="form__title title-stripe">Контактные данные (владельца кота)</h2>
           <label class="form__label">E-mail:*
             <input class="form__input" type="email" name="email" placeholder="kuklachev@gmail.com" required>
           </label>
           <label class="form__label">Телефон:*
             <input class="form__input" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
           </label>
-        </div>
-        <h2 class="form__title">Комментарий</h2>
-        <div class="form__wrapper">
+          <h2 class="form__title title-stripe">Комментарий</h2>
           <label class="form__label">
-            <textarea class="form__text" name="text" placeholder="Расскажите обо всех повадках кота"></textarea>
+            <textarea class="form__textarea" name="text" placeholder="Расскажите обо всех повадках кота"></textarea>
           </label>
         </div>
-        <div class="form__wrapper">
-          <h2 class="form__title">Дополнительно</h2>
-          <label class="form__label">
-            <input class="visually-hidden" type="checkbox" name="sweetener" checked>
-            <span class="form__checkbox">Сахарозаменитель</span>
-          </label>
-          <label class="form__label">
-            <input class="visually-hidden" type="checkbox" name="water">
-            <span class="form__checkbox">Питьевая вода</span>
-          </label>
-          <label class="form__label">
-            <input class="visually-hidden" type="checkbox" name="milk">
-            <span class="form__checkbox">Молоко</span>
-          </label>
-          <label class="form__label">
-            <input class="visually-hidden" type="checkbox" name="vitamins">
-            <span class="form__checkbox">Витамины</span>
-          </label>
-        </div>
-        <button class="button" type="submit">Отправить заявку</button>
-        <span class="form__required">* — Обязательные поля</span>
+        <ul class="form__list">
+          <h2 class="form__title title-stripe">Дополнительно</h2>
+          <li class="form__item">
+            <label class="form__label">
+              <input class="visually-hidden" type="checkbox" name="sweetener" checked>
+              <span class="form__checkbox">Сахарозаменитель</span>
+            </label>
+          </li>
+          <li class="form__item">
+            <label class="form__label">
+              <input class="visually-hidden" type="checkbox" name="water">
+              <span class="form__checkbox">Питьевая вода</span>
+            </label>
+          </li>
+          <li class="form__item">
+            <label class="form__label">
+              <input class="visually-hidden" type="checkbox" name="milk">
+              <span class="form__checkbox">Молоко</span>
+            </label>
+          </li>
+          <li class="form__item">
+            <label class="form__label">
+              <input class="visually-hidden" type="checkbox" name="vitamins">
+              <span class="form__checkbox">Витамины</span>
+            </label>
+          </li>
+          <button class="button" type="submit">Отправить заявку</button>
+          <span class="form__required">* — Обязательные поля</span>
+        </ul>
       </form>
-      <section class="contacts">
+      <section class="contacts main__wrapper">
         <h2 class="visually-hidden">Контакты</h2>
         <p class="contacts__title">приглашаем к сотрудничеству дилеров!</p>
         <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
@@ -100,9 +112,9 @@
         <h2 class="visually-hidden">Карта</h2>
       </section>
     </main>
-    <footer class="footer">
-      <div class="logo footer__logo">
-        <img class="logo__icon" src="http://placehold.it/150x100" width="128" height="24" alt="Логотип">
+    <footer class="footer main__wrapper">
+      <div class="footer__logo">
+        <img class="footer__image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип">
       </div>
       <section class="social footer__social">
         <h2 class="visually-hidden">Соцсети</h2>
@@ -112,9 +124,9 @@
           <li class="social__item"><a class="social__link" href="#">Фейсбук</a></li>
         </ul>
       </section>
-      <a class="copyright footer__copyright" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="copyright__text">HTML Academy</span>
-        <img class="copyright__logo" src="http://placehold.it/150x100" width="27" height="34" alt="Копирайт">
+      <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <span class="footer__text">HTML Academy</span>
+        <img class="footer__icon" src="img/htmlacademy.svg" width="27" height="34" alt="Копирайт">
       </a>
     </footer>
   </body>

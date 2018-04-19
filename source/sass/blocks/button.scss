@@ -1,0 +1,16 @@
+.button {
+  display: inline-block;
+  width: 100%;
+  padding: 11px;
+  font: inherit;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: $green-2;
+  border: none;
+
+  &--grey {
+    color: $dark-1;
+    background-color: $grey-1;
+  }
+}
