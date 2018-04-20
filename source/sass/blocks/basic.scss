@@ -2,7 +2,7 @@
   padding: 30px 20px 0;
   min-height: 305px;
 
-  @include b-image($green-1,"index-background-mobile@1x.jpg");
+  @include b-image($green-1, "index-background-mobile@1x.jpg");
 }
 
 .basic__title {

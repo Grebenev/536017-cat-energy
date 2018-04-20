@@ -1,0 +1,18 @@
+.title {
+  margin: 0;
+  padding: 20px 0;
+  color: $dark-3;
+  text-align: center;
+
+  @include font(36, 1.67);
+
+  &--white {
+    padding: 10px 0;
+    line-height: 1;
+    color: #ffffff;
+  }
+
+  &--stripe {
+    @include font(24, 1);
+  }
+}
