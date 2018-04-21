@@ -1,6 +1,7 @@
 .function__title {
   margin-bottom: 30px;
   line-height: 1.67;
+  text-align: left;
 }
 
 .function__list {
@@ -12,4 +13,29 @@
   margin-bottom: 20px;
   list-style: none;
   font-family: "Arial", sans-serif;
+}
+
+@media (min-width: $screen-tablet) {
+  .function__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .function__item {
+    width: 354px;
+    height: 230px;
+  }
+}
+
+@media (min-width: $screen-desktop) {
+  .function__list {
+    display: flex;
+    // justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .function__item {
+    width: 245px;
+  }
 }

@@ -7,3 +7,16 @@
   @include font(16, 1);
   font-family: "Arial", sans-serif;
 }
+
+.footer__link {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: $screen-tablet) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

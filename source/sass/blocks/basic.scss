@@ -1,12 +1,9 @@
 .basic {
-  padding: 30px 20px 0;
+  // padding: 30px 20px 0;
   min-height: 305px;
-
-  @include b-image($green-1, "index-background-mobile@1x.jpg");
-}
-
-.basic__title {
-  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 
 .basic__slogan {
@@ -14,7 +11,56 @@
   padding: 0;
 
   @include font(14, 1);
-  color: #ffffff;
+  color: $dark-3;
   text-align: center;
   text-transform: uppercase;
+}
+
+.basic__image {
+  margin: 0 auto;
+}
+
+@media (max-width: $screen-tablet) { // <- 768
+  .basic {
+    height: 480px;
+
+    @include b-image(transparent, "index-background-mob1ile@1x.jpg");
+    background-image: linear-gradient(to top, transparent 0%, transparent 30%, $green-1 30%, $green-1 100%);
+  }
+
+  .basic__title {
+    padding: 10px 0;
+    padding-bottom: 20px;
+    line-height: 1;
+    color: #ffffff;
+  }
+
+  .basic__slogan {
+    color: #ffffff;
+  }
+}
+
+@media (min-width: $screen-tablet) { // 320 -> 768
+  .basic {
+    height: 700px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .basic__button {
+    order: 1;
+    width: 245px;
+  }
+
+  .basic__image {
+    order: 2;
+  }
+}
+
+@media (min-width: $screen-desktop) { // 1200 ->
+  .basic {
+    position: absolute;
+    width: 100%;
+    height: 550px;
+  }
 }

@@ -10,6 +10,7 @@
 
 .programs__item {
   padding: 20px;
+  height: 266px; //временно для сетки
   background-color: $grey-1;
   margin-bottom: 20px;
 }
@@ -26,4 +27,23 @@
   margin: 0;
   padding: 0;
   font-family: "Arial", sans-serif;
+}
+
+@media (min-width: $screen-tablet) { //320 -> 768
+
+  .programs__item {
+    height: 372px; //временно для сетки
+  }
+}
+
+@media (min-width: $screen-desktop) { //768 -> 1200
+
+  .programs__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .programs__item {
+    width: 570px;
+  }
 }

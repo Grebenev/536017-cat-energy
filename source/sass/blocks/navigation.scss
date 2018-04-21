@@ -1,3 +1,4 @@
+
 .navigation__list {
   margin: 0;
   padding: 0;
@@ -12,4 +13,26 @@
   padding: 22px 20px;
   color: $dark-3;
   border-bottom: 1px solid $grey-2;
+}
+
+@media (min-width: $screen-tablet) { // 768 - 1200-----------
+  .navigation {
+    min-width: 768px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navigation__list { //список меню горизонтал
+    display: flex;
+  }
+}
+
+@media (min-width: $screen-desktop) { // 1200 - >------------
+  .header__navigation {
+    position: relative;
+    width: 100%;
+    height: 690px;
+    padding-top: 50px;
+    background-image: linear-gradient(to right, transparent 0%, transparent 50%, $green-1 20%, $green-1 100%);
+  }
 }

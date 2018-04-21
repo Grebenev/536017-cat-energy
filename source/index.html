@@ -2,39 +2,43 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
-      <nav class="navigation">
-        <a class="navigation__logo">
-          <img class="navigation__icon" src="img/logo-mobile.svg" width="191" height="40" alt="Логотип">
-        </a>
-        <button class="navigation__toggle" type="button"></button>
-        <ul class="navigation__list">
-          <li class="navigation__item navigation__item--active">
-            <a class="navigation__link">Главная</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="catalog.html">Каталог продукции</a>
-          </li>
-          <li class="navigation__item">
-            <a class="navigation__link" href="form.html">Подбор программы</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="header__navigation">
+        <nav class="navigation main__wrapper">
+          <a class="navigation__logo">
+            <img class="navigation__icon" src="img/logo-mobile.svg" width="191" height="40" alt="Логотип">
+          </a>
+          <button class="navigation__toggle" type="button"></button>
+          <ul class="navigation__list">
+            <li class="navigation__item navigation__item--active">
+              <a class="navigation__link">Главная</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="catalog.html">Каталог продукции</a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="form.html">Подбор программы</a>
+            </li>
+          </ul>
+        </nav>
+        <section class="basic main__wrapper">
+          <h1 class="basic__title title">Функциональное питание для котов</h1>
+          <p class="basic__slogan">Занялся собой? Займись котом!</p>
+          <img class="basic__image" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Кэт энерджи Курица">
+          <a class="button basic__button" href="#">Подобрать программу</a>
+        </section>
+      </div>
     </header>
     <main class="main">
-      <section class="basic">
-        <h1 class="basic__title title title--white">Функциональное питание для котов</h1>
-        <p class="basic__slogan">Занялся собой? Займись котом!</p>
-        <img class="basic__image" src="#" width="280" height="270" alt="Кэт энерджи Курица">
-      </section>
+
       <div class="main__wrapper">
         <section class="programs">
           <h2 class="visually-hidden">Подобор программы</h2>
-          <a class="button programs__button" href="#">Подобрать программу</a>
           <ul class="programs__list">
             <li class="programs__item">
               <h3 class="programs__title">Похудение</h3>
@@ -58,10 +62,10 @@
           </ul>
         </section>
       </div>
-      <section class="illustration main__wrapper">
+      <section class="illustration">
+        <div class="illustration__wrapper main__wrapper">
         <h2 class="illustration__title title">Живой пример</h2>
         <p class="illustration__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-        <div class="illustration__wrapper">
           <div class="count illustration__count">
             <b class="count__title">5 кг</b>
             <span class="count__text">снижение веса</span>
@@ -72,7 +76,7 @@
           </div>
           <span class="illustration__expenses">Затраты на питание: 15 000 руб.</span>
         </div>
-        <div class="slider illustration__slider">
+        <div class="slider illustration__slider main__wrapper">
           <input class="visually-hidden slider__input slider__input--before" id="slider-before" type="radio" name="slider" checked>
           <input class="visually-hidden slider__input slider__input--after" id="slider-after" type="radio" name="slider">
           <div class="slider__image-wrap">

@@ -1,0 +1,85 @@
+
+.additional__button {
+  margin-bottom: 15px;
+}
+
+.additional__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.additional__item {
+  margin-bottom: 25px;
+  border-bottom: 1px solid $grey-2;
+}
+
+.additional__product {
+  margin: 0;
+  padding: 15px 0;
+
+  @include font(16, 1.25);
+  color: $dark-3;
+  text-transform: uppercase;
+}
+
+.additional__text {
+  display: inline-block;
+  padding-bottom: 15px;
+
+  @include font(14, 1);
+  font-family: "Arial", sans-serif;
+}
+
+.additional__bonus {
+  height: 289px;
+  width: 245px;
+
+  @include b-image($green-1, "gift-photo-mobile@1x.jpg");
+}
+
+.additional__action {
+  @include font(16, 1.25);
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+  color: #ffffff;
+}
+
+
+@media (min-width: $screen-tablet) {
+  .additional__item {
+    border: 1px solid $grey-2;
+    border-bottom: 0;
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: $screen-desktop) {
+  .additional {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .additional__item {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 15px 0;
+  }
+
+  .additional__title {
+    width: 100%;
+  }
+
+  .additional__list {
+    width: 70%;
+  }
+
+  .additional__button {
+    width: 245px;
+    margin-bottom: 0;
+  }
+}

@@ -44,16 +44,36 @@
   padding: 25px 0;
 }
 
-.catalog__bonus {
-  min-height: 289px;
+@media (min-width: $screen-tablet) {
+  .catalog__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 
-  @include b-image($green-1, "gift-photo-mobile@1x.jpg");
+  .catalog__item {
+    height: 510px;
+    width: 324px;
+    padding: 0 40px 40px;
+    text-align: center;
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 20%, $grey-1 20%, $grey-1 100%);
+  }
+
+  .catalog__item:not(:nth-child(2n)) {
+    margin-right: 60px;
+  }
 }
 
-.catalog__action {
-  @include font(16, 1.25);
-  margin: 0;
-  padding: 0;
-  font-family: "Arial", sans-serif;
-  color: #ffffff;
+@media (min-width: $screen-desktop) {
+  .catalog__item {
+    height: 510px;
+    width: 245px;
+    padding: 0 40px 40px;
+    text-align: center;
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 20%, $grey-1 20%, $grey-1 100%);
+  }
+
+  .catalog__item:not(:nth-child(4n)) {
+    margin-right: 40px;
+  }
 }

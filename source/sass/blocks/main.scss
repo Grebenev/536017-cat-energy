@@ -1,3 +1,11 @@
 .main__wrapper {
-  padding: 0 20px;
+  padding: 0 $indents-mobile;
+
+  @media (min-width: $screen-tablet) {
+    padding: 0 $indents-tablet;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding: 0 $indents-desktop;
+  }
 }

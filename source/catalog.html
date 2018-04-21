@@ -2,12 +2,13 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Кэт энерджи - каталог</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
     <header class="header">
-      <nav class="navigation">
+      <nav class="navigation main__wrapper">
         <a class="navigation__logo">
           <img class="navigation__icon" src="img/logo-mobile.svg" width="191" height="40" alt="Логотип">
         </a>
@@ -197,36 +198,38 @@
               <a class="button button--grey" href="#">Показать все</a>
             </li>
           </ul>
-          <h3 class="catalog__additional title title--stripe">Дополнительные товары</h3>
-          <ul class="catalog__list">
-            <li class="catalog__item">
-              <h2 class="catalog__product"><a href="#">Сахарозаменитель</a></h2>
-              <span class="catalog__text">1 упаковка (100 г)</span>
-              <span class="catalog__text">100 Р.</span>
-              <a class="button catalog__button" href="#">Заказать</a>
+        </section>
+        <section class="additional">
+          <h3 class="additional__title title title--stripe">Дополнительные товары</h3>
+          <ul class="additional__list">
+            <li class="additional__item">
+              <h2 class="additional__product"><a href="#">Сахарозаменитель</a></h2>
+              <span class="additional__text">1 упаковка (100 г)</span>
+              <span class="additional__text">100 Р.</span>
+              <a class="button additional__button" href="#">Заказать</a>
             </li>
-            <li class="catalog__item">
-              <h2 class="catalog__product"><a href="#">Питьевая вода</a></h2>
-              <span class="catalog__text">5 литров</span>
-              <span class="catalog__text">50 Р.</span>
-              <a class="button catalog__button" href="#">Заказать</a>
+            <li class="additional__item">
+              <h2 class="additional__product"><a href="#">Питьевая вода</a></h2>
+              <span class="additional__text">5 литров</span>
+              <span class="additional__text">50 Р.</span>
+              <a class="button additional__button" href="#">Заказать</a>
             </li>
-            <li class="catalog__item">
-              <h2 class="catalog__product"><a href="#">Молоко</a></h2>
-              <span class="catalog__text">1 литр</span>
-              <span class="catalog__text">100 Р.</span>
-              <a class="button catalog__button" href="#">Заказать</a>
+            <li class="additional__item">
+              <h2 class="additional__product"><a href="#">Молоко</a></h2>
+              <span class="additional__text">1 литр</span>
+              <span class="additional__text">100 Р.</span>
+              <a class="button additional__button" href="#">Заказать</a>
             </li>
-            <li class="catalog__item">
-              <h2 class="catalog__product"><a href="#">Витамины</a></h2>
-              <span class="catalog__text">1 упаковка (30 г)</span>
-              <span class="catalog__text">300 Р.</span>
-              <a class="button catalog__button" href="#">Заказать</a>
+            <li class="additional__item">
+              <h2 class="additional__product"><a href="#">Витамины</a></h2>
+              <span class="additional__text">1 упаковка (30 г)</span>
+              <span class="additional__text">300 Р.</span>
+              <a class="button additional__button" href="#">Заказать</a>
             </li>
           </ul>
-          <div class="catalog__bonus">
-            <p class="catalog__action">
-              Закажите все и получите чехол для кота в подарок!
+          <div class="additional__bonus">
+            <p class="additional__action">
+            Закажите все и получите чехол для кота в подарок!
             </p>
           </div>
         </section>
@@ -240,7 +243,7 @@
         <h2 class="visually-hidden">Карта</h2>
       </section>
     </main>
-    <footer class="footer">
+    <footer class="footer main__wrapper">
       <div class="footer__logo">
         <img class="footer__image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип">
       </div>
