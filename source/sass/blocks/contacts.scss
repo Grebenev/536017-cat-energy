@@ -22,6 +22,13 @@
   font-family: "Arial", sans-serif;
 }
 
+@media (min-width: $screen-tablet) {
+  .contacts {
+    padding: 50px $indents-tablet + 40px;
+    background-color: $grey-1;
+  }
+}
+
 @media (min-width: $screen-desktop) {
   .contacts {
     position: absolute;

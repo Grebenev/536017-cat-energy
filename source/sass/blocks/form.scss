@@ -29,15 +29,71 @@
 
 .form__list {
   margin: 0;
-  padding: 0  20px;
+  padding: 0;
   list-style: none;
 
-  &--border {
-    border: 1px solid $grey-1;
+  &--program {
+    margin-left: -$indents-mobile;
+    margin-right: -$indents-mobile;
+    padding: 0 $indents-mobile;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
   }
 }
 
 .form__title {
   margin: 0;
   margin-bottom: 30px;
+  text-align: left;
+}
+
+@media (min-width: $screen-tablet) {
+  .form__form {
+    padding: 0 $indents-tablet + 10px;
+  }
+
+  .form__list {
+    &--program {
+      margin: 0;
+      padding: 0;
+      border: 1px solid #cdcdcd;
+    }
+
+    &--checkbox {
+      display: flex;
+      // justify-content: space-between;
+      // align-items: baseline;
+      flex-wrap: wrap;
+      // width: 540px;
+    }
+  }
+
+  .form__button {
+    width: 283px;
+  }
+
+  .form__item {
+    padding: 0 50px;
+  }
+}
+
+@media (min-width: $screen-desktop) {
+  .form__form {
+    padding: 0;
+  }
+
+  .form__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .form__list--сat-data {
+    min-width: 400px;
+  }
+
+  .form__list--program {
+    min-width: 400px;
+  }
 }
