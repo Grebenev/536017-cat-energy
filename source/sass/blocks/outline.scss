@@ -1,18 +1,3 @@
-
-.basic,
-.programs__item,
-.function__item,
-.illustration__wrapper,
-.illustration__slider,
-.contacts,
-.map,
-.footer {
-  box-shadow: inset 0 0 0 2px black;
-}
-
-.form,
-.form__list--checkbox,
-.form__wrapper {
-  box-shadow: inset 0 0 0 2px red;
-  // background-color: rgba(255, 0, 0, 0.2);
+* {
+  box-shadow: inset 0 0 0 1px red;
 }

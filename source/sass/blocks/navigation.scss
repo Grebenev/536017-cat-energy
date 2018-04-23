@@ -2,37 +2,48 @@
 .navigation__list {
   margin: 0;
   padding: 0;
-
-  @include font(20, 1, 500);
-  text-transform: uppercase;
   list-style: none;
-  text-align: center;
 }
 
 .navigation__item {
   padding: 22px 20px;
+  text-align: center;
   color: $dark-3;
   border-bottom: 1px solid $grey-2;
 }
 
-@media (min-width: $screen-tablet) { // 768 - 1200-----------
+.navigation__link {
+  @include font(20, 1, 500);
+  text-transform: uppercase;
+}
+
+@media (min-width: $screen-tablet) {
   .navigation {
-    min-width: 768px;
     display: flex;
     justify-content: space-between;
+    min-width: 768px;
   }
 
-  .navigation__list { //список меню горизонтал
+  .navigation__list {
     display: flex;
+  }
+
+  .navigation__link {
+    @include font(18, 1.39);
+    color: $dark-2;
   }
 }
 
-@media (min-width: $screen-desktop) { // 1200 - >------------
-  .header__navigation {
-    position: relative;
-    width: 100%;
-    height: 690px;
-    padding-top: 50px;
-    background-image: linear-gradient(to right, transparent 0%, transparent 50%, $green-1 20%, $green-1 100%);
+@media (min-width: $screen-desktop) {
+  .navigation__list {
+    &--white {
+      .navigation__link {
+        color: #ffffff;
+      }
+    }
+  }
+
+  .navigation__link {
+    @include font(20, 1.25);
   }
 }

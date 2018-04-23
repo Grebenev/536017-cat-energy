@@ -3,11 +3,18 @@
   line-height: $height;
   font-weight: $weight;
 }
-//Картинка фоном (#ffffff, "name.jpg", 0 0, no-repeat)
 
+//Картинка фоном (#ffffff, "name.jpg", 0 0, no-repeat)
 @mixin b-image ($image-color: #ffffff, $image-url: "name.jpg", $image-position: 0 0, $image-repeat: no-repeat) {
   background-color: $image-color;
   background-image: url("/img/"+ $image-url);
   background-position: $image-position;
   background-repeat: $image-repeat;
+}
+
+// Флекс-центровщик
+@mixin center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

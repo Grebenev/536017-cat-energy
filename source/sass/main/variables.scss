@@ -12,3 +12,6 @@ $screen-desktop: 1200px;
 $indents-mobile: 20px;
 $indents-tablet: 30px;
 $indents-desktop: 110px;
+
+$top-gradient: linear-gradient(to top, transparent 0%, transparent 30%, $green-1 30%, $green-1 100%);
+$right-gradient: linear-gradient(to right, transparent 0%, transparent 50%, $green-1 20%, $green-1 100%);

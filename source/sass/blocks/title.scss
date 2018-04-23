@@ -1,8 +1,10 @@
 .title {
+  // align-self: center;
   margin: 0;
   padding: 20px 0;
   color: $dark-3;
   text-align: center;
+
 
   @include font(36, 1.67);
 
@@ -11,5 +13,17 @@
 
     @include font(24, 1);
     text-align: left;
+  }
+}
+
+@media (min-width: $screen-tablet) {
+  .title {
+    font-size: 60px;
+    line-height: 1;
+    text-align: left;
+
+    &--stripe {
+      @include font(36, 1);
+    }
   }
 }

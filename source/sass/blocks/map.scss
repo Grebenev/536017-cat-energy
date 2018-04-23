@@ -1,6 +1,6 @@
 .map {
-  min-height: 362px;
   position: relative;
+  min-height: 362px;
 
   @include b-image(#f7f7f7, "bg-map-mobile@1x.png");
 }

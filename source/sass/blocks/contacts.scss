@@ -1,23 +1,23 @@
 .contacts {
-  padding-top: 30px;
-  padding-bottom: 25px;
   display: flex;
   justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 25px;
 }
 
 .contacts__title {
+  width: 125px;
   padding: 0;
   margin: 0;
-  width: 125px;
 
   @include font(16, 1.25);
   color: $dark-3;
 }
 
 .contacts__text {
+  width: 135px;
   padding: 0;
   margin: 0;
-  width: 135px;
   line-height: 1.43;
   font-family: "Arial", sans-serif;
 }
@@ -33,8 +33,8 @@
   .contacts {
     position: absolute;
     z-index: 1;
-    background-color: #ffffff;
     width: 570px;
     height: 201px;
+    background-color: #ffffff;
   }
 }

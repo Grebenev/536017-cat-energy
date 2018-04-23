@@ -3,7 +3,8 @@
 @import "main/fonts";
 @import "main/global";
 @import "blocks/visually-hidden";
-@import "blocks/main";
+@import "blocks/wrapper";
+@import "blocks/header";
 @import "blocks/navigation";
 @import "blocks/title";
 @import "blocks/button";
@@ -20,4 +21,4 @@
 @import "blocks/catalog";
 @import "blocks/additional";
 @import "blocks/form";
-@import "blocks/outline";
+// @import "blocks/outline";

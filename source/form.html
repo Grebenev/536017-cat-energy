@@ -8,7 +8,7 @@
   </head>
   <body>
     <header class="header">
-      <nav class="navigation main__wrapper">
+      <nav class="navigation wrapper">
         <a class="navigation__logo">
           <img class="navigation__icon" src="img/logo-mobile.svg" width="191" height="40" alt="Логотип">
         </a>
@@ -27,7 +27,7 @@
       </nav>
     </header>
     <main class="main">
-      <section class="form main__form main__wrapper">
+      <section class="form main__form wrapper">
         <h1 class="title form__title">Подбор программы</h1>
         <form class="form__form" action="https://echo.htmlacademy.ru" method="post">
           <p class="form__text">Заполните анкету и мы подберем программу питания для вашего кота</p>
@@ -79,12 +79,16 @@
               <input class="form__input" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
             </label>
           </div>
-          <h2 class="form__title title title--stripe">Комментарий</h2>
+          <div class="form__wrapper">
+            <h2 class="form__title title title--stripe">Комментарий</h2>
+          </div>
           <label class="form__label">
             <textarea class="form__textarea" name="text" placeholder="Расскажите обо всех повадках кота"></textarea>
           </label>
-          <ul class="form__list form__list--checkbox">
+          <div class="form__wrapper">
             <h2 class="form__title title title--stripe">Дополнительно</h2>
+          </div>
+          <ul class="form__list form__list--checkbox">
             <li class="form__item">
               <label class="form__label">
                 <input class="visually-hidden" type="checkbox" name="sweetener" checked>
@@ -109,12 +113,14 @@
                 <span class="form__checkbox">Витамины</span>
               </label>
             </li>
+          </ul>
+          <div class="form__wrapper">
             <button class="button form__button" type="submit">Отправить заявку</button>
             <span class="form__required">* — Обязательные поля</span>
-          </ul>
+          </div>
         </form>
       </section>
-      <section class="contacts main__wrapper">
+      <section class="contacts wrapper">
         <h2 class="visually-hidden">Контакты</h2>
         <p class="contacts__title">приглашаем к сотрудничеству дилеров!</p>
         <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
@@ -123,7 +129,7 @@
         <h2 class="visually-hidden">Карта</h2>
       </section>
     </main>
-    <footer class="footer main__wrapper">
+    <footer class="footer wrapper">
       <div class="footer__logo">
         <img class="footer__image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип">
       </div>
