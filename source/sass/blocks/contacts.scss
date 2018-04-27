@@ -1,19 +1,44 @@
 .contacts {
-  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 27px;
   padding-bottom: 25px;
+
+  &--grey {
+    background-color: $grey-1;
+  }
 }
 
 .contacts__title {
+  width: 125px;
   padding: 0;
   margin: 0;
 
   @include font(16, 1.25);
   color: $dark-3;
+  text-transform: uppercase;
 }
 
 .contacts__text {
+  width: 135px;
   padding: 0;
   margin: 0;
   line-height: 1.43;
   font-family: "Arial", sans-serif;
+}
+
+@media (min-width: $screen-tablet) {
+  .contacts {
+    background-color: $grey-1;
+  }
+}
+
+@media (min-width: $screen-desktop) {
+  .contacts {
+    position: absolute;
+    z-index: 1;
+    width: 570px;
+    height: 201px;
+    background-color: #ffffff;
+  }
 }

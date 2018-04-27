@@ -1,0 +1,131 @@
+.additional {
+  margin-bottom: 35px;
+}
+
+.additional__title {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 0;
+}
+
+.additional__list {
+  margin: 0;
+  margin-bottom: 40px;
+  list-style: none;
+}
+
+.additional__item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 0;
+  padding-bottom: 16px;
+  padding-left: 0;
+  padding-right: 0;
+  border-bottom: 1px solid $grey-4;
+
+  &:first-child .additional__product {
+    border-top: 1px solid $grey-4;
+  }
+}
+
+.additional__product {
+  width: 100%;
+  margin-top: 13px;
+  margin-bottom: 11px;
+  margin-left: 0;
+  margin-right: 0;
+
+  @include font(16, 1.25);
+  color: $dark-3;
+  text-transform: uppercase;
+}
+
+.additional__text {
+  display: inline-block;
+  padding-bottom: 15px;
+
+  @include font(14, 1);
+  font-family: "Arial", sans-serif;
+  text-align: right;
+}
+
+.additional__action {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 289px;
+  margin: 0;
+  padding-top: 65px;
+  padding-bottom: 45px;
+  padding-left: 55px;
+  padding-right: 55px;
+
+  @include font(16, 1.25);
+  font-family: "Arial", sans-serif;
+  color: #ffffff;
+  text-align: center;
+
+  @include b-image("gift-photo-mobile@1x.jpg", $green-1, center);
+  background-size: cover;
+
+  &::after {
+    margin-left: -55/2 + px;
+
+    @include pos (60px, 60px, 64px, 50%);
+    @include b-image("icon-gift.svg", transparent);
+  }
+}
+
+.additional__bonus {
+  padding-left: $padding-mobile;
+  padding-right: $padding-mobile;
+}
+
+@media (min-width: $screen-tablet) {
+  .additional__item {
+    border-bottom: 0;
+    margin-bottom: 0;
+    border: 1px solid $grey-2;
+  }
+}
+
+@media (min-width: $screen-desktop) {
+  .additional {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .additional__item {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 15px 0;
+  }
+
+  .additional__product {
+    width: auto;
+  }
+
+  .additional__list {
+    padding-left: 40px;
+    width: 895px;
+  }
+
+  .additional__title {
+    width: 100%;
+  }
+
+  .additional__button {
+    width: 245px;
+    margin-bottom: 0;
+  }
+
+  .additional__action {
+    width: 245px;
+    min-height: 290px;
+  }
+}

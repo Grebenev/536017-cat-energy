@@ -1,9 +1,48 @@
 .count__title {
   @include font(24, 1);
   color: $dark-3;
+  text-transform: uppercase;
 }
 
-.count__text {
+.count__subtext {
+  position: absolute;
+  top: 45px;
+  left: 18px;
+  width: 90px;
+  padding: 0 10px;
+
   @include font(12, 1);
   font-family: "Arial", sans-serif;
+  background-color: $grey-1;
+}
+
+.count__wrapper {
+  position: relative;
+  width: 123px;
+  margin-bottom: 35px;
+  padding: 15px 10px;
+  text-align: center;
+  border: 1px solid $grey-4;
+}
+
+@media (min-width: $screen-tablet) {
+  .count__wrapper {
+    width: 160px;
+    margin-bottom: 0;
+    margin-right: 40px;
+  }
+
+  .count__title {
+    @include font (30, 1.2);
+  }
+
+  .count__subtext {
+    top: 59px;
+    left: 14px;
+    width: 137px;
+    padding: 0 5px;
+
+    @include font (14, 1);
+    background-color: #ffffff;
+  }
 }

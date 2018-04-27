@@ -1,0 +1,20 @@
+$grey-1: #f2f2f2;
+$grey-2: #e6e6e6;
+$grey-3: #d9d9d9;
+$grey-4: #cdcdcd;
+
+$dark-1: #444444; //основной для текста
+$dark-2: #222222;
+$dark-3: #111111;
+$green-1: #63a73a; // фон блоков
+$green-2: #68b738; // кнопка
+
+$screen-tablet: 768px;
+$screen-desktop: 1300px;
+
+$padding-mobile: 20px;
+$padding-tablet: 30px;
+$padding-desktop: 40px;
+
+$top-gradient: linear-gradient(to top, transparent 0%, transparent 174px, $green-1 174px, $green-1 100%);
+$right-gradient: linear-gradient(to right, transparent 0%, transparent 50%, $green-1 20%, $green-1 100%);

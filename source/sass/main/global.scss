@@ -1,0 +1,38 @@
+body {
+  width: 320px;
+  margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Oswald", "Arial", sans-serif;
+
+  @include font(14, 1.29);
+  color: $dark-1;
+  background-color: #ffffff;
+}
+
+@media (min-width: $screen-tablet) {
+  body {
+    width: $screen-tablet;
+  }
+}
+
+@media (min-width: $screen-desktop) {
+  body {
+    width: $screen-desktop;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: $dark-3;
+  text-decoration: none;
+}

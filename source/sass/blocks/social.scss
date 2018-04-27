@@ -1,5 +1,32 @@
 .social__list {
+  display: flex;
+  justify-content: center;
   margin: 0;
   padding: 20px 0;
   list-style: none;
+  border-bottom: 1px solid $grey-3;
+}
+
+.social__item {
+  margin: 0 15px;
+}
+
+.social__link {
+  &--vk {
+    fill: #666666;
+    width: 22px;
+    height: 12px;
+  }
+
+  &--inst {
+    fill: #666666;
+    width: 17px;
+    height: 16px;
+  }
+
+  &--fb {
+    fill: #666666;
+    width: 10px;
+    height: 19px;
+  }
 }

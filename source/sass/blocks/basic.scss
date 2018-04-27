@@ -1,20 +1,87 @@
 .basic {
-  padding: 30px 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   min-height: 305px;
-
-  @include b-image($green-1,"index-background-mobile@1x.jpg");
-}
-
-.basic__title {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
+  padding-top: 20px;
 }
 
 .basic__slogan {
   margin: 0;
-  padding: 0;
+  margin-bottom: 20px;
+  padding: 5px 0;
 
   @include font(14, 1);
-  color: #ffffff;
+  color: $dark-3;
   text-align: center;
   text-transform: uppercase;
+}
+
+.basic__image {
+  margin: 0 auto;
+  margin-bottom: 5px;
+}
+
+@media (max-width: $screen-tablet) { // <- 768
+  .basic {
+    height: 480px;
+    background-image: $top-gradient;
+
+    @include b-image("index-background-mobile@1x.jpg");
+    // background-size: cover;
+  }
+
+  .basic__title {
+    padding: 10px 0;
+    padding-bottom: 20px;
+    line-height: 1;
+    color: #ffffff;
+  }
+
+  .basic__slogan {
+    color: #ffffff;
+  }
+}
+
+@media (min-width: $screen-tablet) { // 320 -> 768
+  .basic {
+    justify-content: flex-start;
+    align-items: flex-start;
+    height: 700px;
+    padding-top: 30px;
+    padding-bottom: 0;
+    padding-left: 120px;
+    padding-right: 120px;
+  }
+
+  .basic__title {
+    align-self: flex-start;
+    width: 450px;
+  }
+
+  .basic__slogan {
+    @include font (20, 1);
+  }
+
+  .basic__button {
+    order: 1;
+    width: auto;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    @include font (20, 1);
+  }
+
+  .basic__image {
+    order: 2;
+  }
+}
+
+@media (min-width: $screen-desktop) { // 1200 ->
+  .basic {
+    position: absolute;
+    width: 100%;
+    height: 550px;
+  }
 }
