@@ -1,13 +1,16 @@
 .basic {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   min-height: 305px;
+  margin-bottom: 20px;
+  padding-top: 20px;
 }
 
 .basic__slogan {
   margin: 0;
-  padding: 0;
+  margin-bottom: 20px;
+  padding: 5px 0;
 
   @include font(14, 1);
   color: $dark-3;
@@ -17,12 +20,16 @@
 
 .basic__image {
   margin: 0 auto;
+  margin-bottom: 5px;
 }
 
 @media (max-width: $screen-tablet) { // <- 768
   .basic {
     height: 480px;
     background-image: $top-gradient;
+
+    @include b-image("index-background-mobile@1x.jpg");
+    // background-size: cover;
   }
 
   .basic__title {
@@ -39,9 +46,13 @@
 
 @media (min-width: $screen-tablet) { // 320 -> 768
   .basic {
-    height: 700px;
     justify-content: flex-start;
     align-items: flex-start;
+    height: 700px;
+    padding-top: 30px;
+    padding-bottom: 0;
+    padding-left: 120px;
+    padding-right: 120px;
   }
 
   .basic__title {
@@ -49,9 +60,17 @@
     width: 450px;
   }
 
+  .basic__slogan {
+    @include font (20, 1);
+  }
+
   .basic__button {
     order: 1;
-    width: 245px;
+    width: auto;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    @include font (20, 1);
   }
 
   .basic__image {

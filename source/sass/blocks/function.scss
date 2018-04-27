@@ -1,5 +1,9 @@
+.function {
+  margin-bottom: 40px;
+}
+
 .function__title {
-  margin-bottom: 30px;
+  margin-bottom: 26px;
   line-height: 1.67;
   text-align: left;
 }
@@ -10,9 +14,36 @@
 }
 
 .function__item {
+  display: flex;
+  align-items: center;
   margin-bottom: 20px;
   list-style: none;
   font-family: "Arial", sans-serif;
+
+  &::before {
+    content: "";
+    display: block;
+    flex-shrink: 0;
+    width: 60px;
+    height: 60px;
+    margin-right: 20px;
+  }
+
+  &:nth-child(1)::before {
+    @include b-image ("advantage-leaf@1x.png", $green-2,  center);
+  }
+
+  &:nth-child(2)::before {
+    @include b-image ("advantage-powder@1x.png", $green-2, center);
+  }
+
+  &:nth-child(3)::before {
+    @include b-image ("advantage-dining@1x.png", $green-2,  center);
+  }
+
+  &:nth-child(4)::before {
+    @include b-image ("advantage-clock@1x.png", $green-2, center);
+  }
 }
 
 @media (min-width: $screen-tablet) {
@@ -23,8 +54,32 @@
   }
 
   .function__item {
-    width: 354px;
-    height: 230px;
+    position: relative;
+    display: block;
+    width: 324px;
+    min-height: 230px;
+    padding-right: 74px;
+    counter-increment: counter;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+      margin-right: 20px;
+      margin-bottom: 35px;
+    }
+
+    &::after {
+      content: counter(counter);
+      position: absolute;
+      display: block;
+      top: -30px;
+      left: 100px;
+      z-index: -1;
+
+      @include font (281, 1);
+      font-family: "Oswald", "Arial", sans-serif;
+      color: $grey-1;
+    }
   }
 }
 

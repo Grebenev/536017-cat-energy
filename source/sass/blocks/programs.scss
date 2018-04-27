@@ -9,30 +9,113 @@
 }
 
 .programs__item {
-  padding: 20px;
-  height: 266px; //временно для сетки
+  position: relative;
+  padding: 25px 20px 20px;
   background-color: $grey-1;
   margin-bottom: 20px;
 }
 
 .programs__title {
+  position: relative;
+  display: flex;
+  align-items: center;
   padding: 0;
   margin: 0;
 
   @include font(24, 1.54);
   color: $dark-3;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+
+  &::before {
+    content: "";
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+    background-color: $green-2;
+    border-radius: 50%;
+  }
+
+  &--slim {
+    &::after {
+      @include pos (35px, 49px, 0, 10px);
+      @include b-image("icon-cat-slim.svg", transparent);
+    }
+  }
+
+  &--pro::after {
+    @include pos (67px, 28px, 10px, -7px);
+    @include b-image("icon-cat-pro.svg", transparent);
+  }
 }
 
 .programs__description {
   margin: 0;
+  margin-bottom: 20px;
   padding: 0;
+  padding-bottom: 20px;
   font-family: "Arial", sans-serif;
+  border-bottom: 1px solid $grey-3;
+}
+
+.programs__link {
+  svg {
+    width: 40px;
+  }
+
+  margin-left: 3px;
+
+  @include font(16, 1);
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: relative;
+    width: 23px;
+    height: 11px;
+    vertical-align: middle;
+    margin-left: 3px;
+
+    @include b-image("icon-right-arrow-long.svg", transparent);
+  }
+
+  &:active,
+  &:active::after {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: $screen-tablet) { //320 -> 768
 
   .programs__item {
-    height: 372px; //временно для сетки
+    padding: 80px 60px 60px 55px;
+  }
+
+  .programs__title {
+    width: 380px;
+    position: static;
+
+    @include font (36, 1);
+
+    &::before {
+      @include pos (200px, 200px, 92px, 67%);
+    }
+
+    &--slim::after {
+      @include pos (140px, 194px, 80px, 71%);
+    }
+
+    &--pro::after {
+      @include pos (268px, 112px, 135px, 62%);
+    }
+  }
+
+  .programs__description {
+    width: 380px;
+
+    @include font (16, 1.5);
+    border: 0;
   }
 }
 
@@ -45,5 +128,26 @@
 
   .programs__item {
     width: 570px;
+    min-height: 370px;
+    padding: 45px 55px 60px 50px;
+  }
+
+  .programs__title {
+    &::before {
+      position: static;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      margin-right: 60px;
+    }
+
+    &--slim::after {
+      @include pos (79px, 97px, 46px, 13%);
+    }
+
+    &--pro::after {
+      @include pos (134px, 56px, 78px, 7%);
+    }
   }
 }

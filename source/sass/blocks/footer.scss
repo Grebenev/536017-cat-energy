@@ -1,6 +1,14 @@
+.footer {
+  background-color: $grey-1;
+}
+
 .footer__logo {
-  padding: 40px 0 30px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  padding-left: 0;
+  padding-right: 0;
   text-align: center;
+  border-bottom: 1px solid $grey-3;
 }
 
 .footer__text {
@@ -11,6 +19,15 @@
 .footer__link {
   display: flex;
   justify-content: space-between;
+  padding-top: 27px;
+  padding-bottom: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.footer__icon {
+  width: 27px;
+  height: 35px;
 }
 
 @media (min-width: $screen-tablet) {

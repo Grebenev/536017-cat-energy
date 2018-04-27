@@ -1,8 +1,12 @@
 .contacts {
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
+  padding-top: 27px;
   padding-bottom: 25px;
+
+  &--grey {
+    background-color: $grey-1;
+  }
 }
 
 .contacts__title {
@@ -12,6 +16,7 @@
 
   @include font(16, 1.25);
   color: $dark-3;
+  text-transform: uppercase;
 }
 
 .contacts__text {
@@ -24,7 +29,6 @@
 
 @media (min-width: $screen-tablet) {
   .contacts {
-    padding: 50px $indents-tablet + 40px;
     background-color: $grey-1;
   }
 }

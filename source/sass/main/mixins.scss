@@ -4,12 +4,22 @@
   font-weight: $weight;
 }
 
-//Картинка фоном (#ffffff, "name.jpg", 0 0, no-repeat)
-@mixin b-image ($image-color: #ffffff, $image-url: "name.jpg", $image-position: 0 0, $image-repeat: no-repeat) {
+//Картинка фоном ("name.jpg", #ffffff, 0 0, no-repeat)
+@mixin b-image ($image-url: "name.jpg", $image-color: #ffffff, $image-position: 0 0, $image-repeat: no-repeat) {
   background-color: $image-color;
   background-image: url("/img/"+ $image-url);
   background-position: $image-position;
   background-repeat: $image-repeat;
+}
+
+// Позиционирование (width, height, top, left, position)
+@mixin pos ($width, $height, $top: 0, $left: 0, $position: absolute) {
+  content: "";
+  position: $position;
+  top: $top;
+  left: $left;
+  width: $width;
+  height: $height;
 }
 
 // Флекс-центровщик

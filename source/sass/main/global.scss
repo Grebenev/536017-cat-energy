@@ -1,5 +1,5 @@
 body {
-  min-width: 320px;
+  width: 320px;
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box;
@@ -8,6 +8,18 @@ body {
   @include font(14, 1.29);
   color: $dark-1;
   background-color: #ffffff;
+}
+
+@media (min-width: $screen-tablet) {
+  body {
+    width: $screen-tablet;
+  }
+}
+
+@media (min-width: $screen-desktop) {
+  body {
+    width: $screen-desktop;
+  }
 }
 
 *,

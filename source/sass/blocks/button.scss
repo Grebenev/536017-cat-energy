@@ -14,3 +14,9 @@
     background-color: $grey-1;
   }
 }
+
+@media (min-width: $screen-tablet) {
+  .button {
+    padding: 8px 27px;
+  }
+}
