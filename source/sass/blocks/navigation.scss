@@ -8,7 +8,7 @@
 
 .navigation__logo {
   display: block;
-  padding: 11px 0;
+  padding: 11px $padding-mobile;
   border-bottom: 1px solid $grey-2;
 }
 
@@ -28,6 +28,7 @@
 .navigation__link {
   @include font(20, 1, 500);
   text-transform: uppercase;
+  letter-spacing: -0.5px;
 }
 
 @media (max-width: $screen-tablet) { //<768
@@ -62,7 +63,8 @@
   .navigation {
     display: flex;
     justify-content: space-between;
-    padding: 22px $padding-tablet;
+    padding: 0 $padding-tablet;
+    padding-top: 22px;
   }
 
   .navigation__logo {
@@ -76,6 +78,7 @@
 
   .navigation__item {
     padding: 0;
+    padding-top: 20px;
     border: 0;
 
     &:not(:last-of-type) {
@@ -85,7 +88,11 @@
 
   .navigation__link {
     display: block;
-    padding: 7px 0;
+    // padding: 7px 0;
+    padding-top: 0;
+    padding-bottom: 7px;
+    padding-left: 0;
+    padding-right: 0;
 
     @include font(18, 1.39);
     color: $dark-2;

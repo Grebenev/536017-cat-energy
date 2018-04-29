@@ -1,12 +1,13 @@
 .illustration {
-  padding-bottom: 20px;
+  padding-bottom: 37px;
   background-color: $grey-1;
 }
 
 
 .illustration__title {
-  line-height: 1.67;
   margin-bottom: 23px;
+  line-height: 1.67;
+  letter-spacing: -1.2px;
 }
 
 .illustration__description {
@@ -24,15 +25,17 @@
 
 .illustration__expenses {
   display: block;
+  margin: 0 auto;
   line-height: 1.43;
   text-transform: uppercase;
-  margin: 0 auto;
   color: $dark-3;
+  letter-spacing: -0.3px;
 }
 
 .illustration__wrapper {
   padding-top: 20px;
   padding-bottom: 35px;
+  padding-right: 21px;
 }
 
 @media (min-width: $screen-tablet) {

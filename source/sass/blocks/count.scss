@@ -2,12 +2,13 @@
   @include font(24, 1);
   color: $dark-3;
   text-transform: uppercase;
+  letter-spacing: -1px;
 }
 
 .count__subtext {
   position: absolute;
-  top: 45px;
-  left: 18px;
+  top: 47px;
+  left: 16px;
   width: 90px;
   padding: 0 10px;
 

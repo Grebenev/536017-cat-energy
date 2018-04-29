@@ -24,6 +24,7 @@
 
   @include font(24, 1.54);
   color: $dark-3;
+  letter-spacing: -0.3px;
   text-transform: uppercase;
   margin-bottom: 25px;
 
@@ -59,11 +60,10 @@
 }
 
 .programs__link {
+  letter-spacing: -0.5px;
   svg {
     width: 40px;
   }
-
-  margin-left: 3px;
 
   @include font(16, 1);
   text-transform: uppercase;
@@ -75,7 +75,7 @@
     width: 23px;
     height: 11px;
     vertical-align: middle;
-    margin-left: 3px;
+    margin-left: 13px;
 
     @include b-image("icon-right-arrow-long.svg", transparent);
   }
@@ -89,33 +89,42 @@
 @media (min-width: $screen-tablet) { //320 -> 768
 
   .programs__item {
-    padding: 80px 60px 60px 55px;
+    padding: 77px 60px 60px 55px;
+    margin-bottom: 30px;
   }
 
   .programs__title {
-    width: 380px;
     position: static;
+    width: 380px;
+    margin-bottom: 24px;
 
     @include font (36, 1);
+    letter-spacing: -1px;
 
     &::before {
-      @include pos (200px, 200px, 92px, 67%);
+      @include pos (200px, 200px, 92px, 63%);
     }
 
     &--slim::after {
-      @include pos (140px, 194px, 80px, 71%);
+      @include pos (140px, 194px, 80px, 478px);
     }
 
     &--pro::after {
-      @include pos (268px, 112px, 135px, 62%);
+      @include pos (268px, 112px, 135px, 413px);
     }
   }
 
   .programs__description {
     width: 380px;
+    margin-bottom: 57px;
+    padding-bottom: 0;
 
     @include font (16, 1.5);
     border: 0;
+  }
+
+  .programs__link {
+    @include font (20, 1)
   }
 }
 

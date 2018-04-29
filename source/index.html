@@ -11,9 +11,12 @@
       <div class="header__navigation">
         <nav class="navigation">
           <a class="navigation__logo">
-            <img class="navigation__icon" src="img/logo-mobile.svg" width="191" height="40" alt="Логотип">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img2/test/logo-tablet.png" width="173" height="58" alt="Логотип">
+              <img class="navigation__icon" src="img/logo-mobile.svg"  alt="Логотип">
+            </picture>
           </a>
-          <ul class="navigation__list navigation__list--white navigation__list--opened">
+          <ul class="navigation__list navigation__list--white navigation__list--closed">
             <button class="navigation__toggle" type="button"></button>
             <li class="navigation__item">
               <a class="navigation__link">Главная</a>
@@ -29,7 +32,10 @@
         <section class="basic wrapper">
           <h1 class="title basic__title">Функциональное питание для котов</h1>
           <p class="basic__slogan">Занялся собой? Займись котом!</p>
-          <img class="basic__image" src="img/index-can-mobile@1x.png" width="280" height="270" alt="Кэт энерджи Курица">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img2/test/index-can-tablet@1x.jpg" alt="Кэт энерджи Курица">
+            <img class="basic__image" src="img/index-can-mobile@1x.png"  alt="Кэт энерджи Курица">
+          </picture>
           <a class="button basic__button" href="#">Подобрать программу</a>
         </section>
       </div>
@@ -46,7 +52,7 @@
             </li>
             <li class="programs__item">
               <h3 class="programs__title programs__title--pro">Набор массы</h3>
-              <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+              <p class="programs__description">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые<br> мышцы!</p>
               <a class="programs__link" href="#">Каталог pro</a>
             </li>
           </ul>
@@ -83,19 +89,20 @@
           <div class="slider__image-wrap">
             <img class="slider__image" src="img/before-mobile@1x.png" width="320" height="240" alt="Было">
           </div>
-          <p class="slider__control">
+          <div class="slider__control">
             <label class="slider__text" for="slider-before">Было
               <span class="slider__button slider__button--before"></span>
             </label>
+            <div class="slider__toggler"></div>
             <label class="slider__text" for="slider-after">Стало
               <span class="slider__button slider__button--after"></span>
             </label>
-          </p>
+          </div>
         </div>
       </section>
       <section class="contacts wrapper">
         <h2 class="visually-hidden">Контакты</h2>
-        <p class="contacts__title">приглашаем к сотрудничеству дилеров!</p>
+        <p class="contacts__title">приглашаем <br>к сотрудничеству дилеров!</p>
         <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
       </section>
       <section class="map">
