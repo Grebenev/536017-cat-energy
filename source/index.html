@@ -12,7 +12,8 @@
         <nav class="navigation">
           <a class="navigation__logo">
             <picture>
-              <source media="(min-width: 768px)" srcset="img2/test/logo-tablet.png" width="173" height="58" alt="Логотип">
+              <source media="(min-width: 1300px)" srcset="http://placehold.it/202x59" width="202" height="59" alt="Логотип">
+              <source media="(min-width: 768px)" srcset="http://placehold.it/173x58" width="173" height="58"  alt="Логотип">
               <img class="navigation__icon" src="img/logo-mobile.svg"  alt="Логотип">
             </picture>
           </a>
@@ -33,7 +34,7 @@
           <h1 class="title basic__title">Функциональное питание для котов</h1>
           <p class="basic__slogan">Занялся собой? Займись котом!</p>
           <picture>
-            <source media="(min-width: 768px)" srcset="img2/test/index-can-tablet@1x.jpg" alt="Кэт энерджи Курица">
+            <source media="(min-width: 768px)" srcset="http://placehold.it/709x609" alt="Кэт энерджи Курица">
             <img class="basic__image" src="img/index-can-mobile@1x.png"  alt="Кэт энерджи Курица">
           </picture>
           <a class="button basic__button" href="#">Подобрать программу</a>
@@ -87,7 +88,11 @@
           <input class="visually-hidden slider__input slider__input--before" id="slider-before" type="radio" name="slider" checked>
           <input class="visually-hidden slider__input slider__input--after" id="slider-after" type="radio" name="slider">
           <div class="slider__image-wrap">
-            <img class="slider__image" src="img/before-mobile@1x.png" width="320" height="240" alt="Было">
+            <picture>
+              <source media="(min-width: 768px)" srcset="http://placehold.it/354x620" alt="Было">
+              <img class="slider__image" src="img/before-mobile@1x.png"  alt="Было">
+            </picture>
+            <!-- <img class="slider__image" src="img/before-mobile@1x.png" width="320" height="240" alt="Было"> -->
           </div>
           <div class="slider__control">
             <label class="slider__text" for="slider-before">Было
@@ -103,10 +108,14 @@
       <section class="contacts wrapper">
         <h2 class="visually-hidden">Контакты</h2>
         <p class="contacts__title">приглашаем <br>к сотрудничеству дилеров!</p>
-        <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span></p>
       </section>
       <section class="map">
         <h2 class="visually-hidden">Карта</h2>
+        <picture>
+          <source media="(min-width: 768px)" srcset="http://placehold.it/676x400">
+          <img class="map__stat" src="img/bg-map-mobile@1x.png" width="320" height="362" alt="ул. Большая Конюшенная, д. 19/8, Санкт-Петербург">
+        </picture>
       </section>
     </main>
     <footer class="footer wrapper">

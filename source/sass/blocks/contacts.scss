@@ -30,7 +30,28 @@
 
 @media (min-width: $screen-tablet) {
   .contacts {
-    background-color: $grey-1;
+    padding-top: 65px;
+    padding-bottom: 40px;
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+
+  .contacts__title {
+    width: 200px;
+    font-size: 20px;
+  }
+
+  .contacts__text {
+    display: block;
+    width: 165px;
+    margin-left: auto;
+
+    @include font (16, 1.25);
+    text-align: right;
+  }
+
+  .contacts__city {
+    line-height: 55px;
   }
 }
 

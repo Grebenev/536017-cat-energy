@@ -57,10 +57,17 @@
   padding-bottom: 20px;
   font-family: "Arial", sans-serif;
   border-bottom: 1px solid $grey-3;
+
+  @media (max-width: $screen-tablet) {
+    br {
+      display: none;
+    }
+  }
 }
 
 .programs__link {
   letter-spacing: -0.5px;
+
   svg {
     width: 40px;
   }
@@ -124,7 +131,7 @@
   }
 
   .programs__link {
-    @include font (20, 1)
+    @include font (20, 1);
   }
 }
 

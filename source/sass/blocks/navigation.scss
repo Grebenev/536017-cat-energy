@@ -8,9 +8,13 @@
 
 .navigation__logo {
   display: block;
-  padding: 11px $padding-mobile;
+  padding-top: 13px;
+  padding-bottom: 11px;
+  padding-left: $padding-mobile;
+  padding-right: $padding-mobile;
   border-bottom: 1px solid $grey-2;
 }
+
 
 .navigation__list {
   margin: 0;
@@ -32,6 +36,7 @@
 }
 
 @media (max-width: $screen-tablet) { //<768
+
   .navigation__toggle {
     position: absolute;
     top: 23px;
@@ -104,6 +109,10 @@
 }
 
 @media (min-width: $screen-desktop) { //1300 >
+  .navigation {
+    padding-top: 4px;
+  }
+
   .navigation__list {
     &--white {
       .navigation__link {

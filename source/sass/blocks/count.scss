@@ -28,9 +28,12 @@
 
 @media (min-width: $screen-tablet) {
   .count__wrapper {
-    width: 160px;
+    width: 161px;
     margin-bottom: 0;
-    margin-right: 40px;
+    margin-right: 45px;
+    // &:last-of-type {
+    //   // margin-right: 80px;
+    // };
   }
 
   .count__title {
@@ -38,7 +41,7 @@
   }
 
   .count__subtext {
-    top: 59px;
+    top: 61px;
     left: 14px;
     width: 137px;
     padding: 0 5px;
