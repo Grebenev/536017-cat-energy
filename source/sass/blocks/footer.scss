@@ -3,8 +3,8 @@
 }
 
 .footer__logo {
-  padding-top: 40px;
-  padding-bottom: 30px;
+  padding-top: 37px;
+  padding-bottom: 28px;
   padding-left: 0;
   padding-right: 0;
   text-align: center;
@@ -19,8 +19,9 @@
 .footer__link {
   display: flex;
   justify-content: space-between;
+  align-item: center;
   padding-top: 27px;
-  padding-bottom: 0;
+  padding-bottom: 15px;
   padding-left: 0;
   padding-right: 0;
 }
@@ -28,6 +29,7 @@
 .footer__icon {
   width: 27px;
   height: 35px;
+  transform: scale(1.47);
 }
 
 @media (min-width: $screen-tablet) {
@@ -35,5 +37,26 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-top: 55px;
+    padding-bottom: 55px;
+  }
+
+  .footer__text {
+    margin-right: 5px;
+  }
+
+  .footer__link {
+    align-items: center;
+    padding: 0;
+  }
+
+  .footer__logo {
+    padding: 0;
+    border: 0;
+  }
+
+  .footer__icon {
+    margin-left: 20px;
+    transform: scale(1.47);
   }
 }

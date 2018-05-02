@@ -6,6 +6,7 @@
   margin-bottom: 26px;
   line-height: 1.67;
   text-align: left;
+  letter-spacing: -1px;
 }
 
 .function__list {
@@ -47,6 +48,15 @@
 }
 
 @media (min-width: $screen-tablet) {
+  .function {
+    margin-bottom: 0;
+  }
+
+  .function__title {
+    margin-bottom: 20px;
+    letter-spacing: -1.5px;
+  }
+
   .function__list {
     display: flex;
     justify-content: space-between;
@@ -58,14 +68,17 @@
     display: block;
     width: 324px;
     min-height: 230px;
+    margin-top: 30px;
+    margin-bottom: 55px;
     padding-right: 74px;
     counter-increment: counter;
+    line-height: 1.7;
 
     &::before {
       width: 80px;
       height: 80px;
       margin-right: 20px;
-      margin-bottom: 35px;
+      margin-bottom: 30px;
     }
 
     &::after {
@@ -73,10 +86,10 @@
       position: absolute;
       display: block;
       top: -30px;
-      left: 100px;
+      left: 102px;
       z-index: -1;
 
-      @include font (281, 1);
+      @include font (282, 1);
       font-family: "Oswald", "Arial", sans-serif;
       color: $grey-1;
     }

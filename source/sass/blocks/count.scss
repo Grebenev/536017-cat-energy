@@ -2,12 +2,13 @@
   @include font(24, 1);
   color: $dark-3;
   text-transform: uppercase;
+  letter-spacing: -1px;
 }
 
 .count__subtext {
   position: absolute;
-  top: 45px;
-  left: 18px;
+  top: 47px;
+  left: 16px;
   width: 90px;
   padding: 0 10px;
 
@@ -27,9 +28,12 @@
 
 @media (min-width: $screen-tablet) {
   .count__wrapper {
-    width: 160px;
+    width: 161px;
     margin-bottom: 0;
-    margin-right: 40px;
+    margin-right: 45px;
+    // &:last-of-type {
+    //   // margin-right: 80px;
+    // };
   }
 
   .count__title {
@@ -37,7 +41,7 @@
   }
 
   .count__subtext {
-    top: 59px;
+    top: 61px;
     left: 14px;
     width: 137px;
     padding: 0 5px;

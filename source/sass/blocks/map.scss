@@ -1,6 +1,11 @@
-.map {
+.map__stat {
   position: relative;
-  min-height: 362px;
+  width: 100%;
+  height: 362px;
+}
 
-  @include b-image("bg-map-mobile@1x.png", #fef7ef);
+@media (min-width: $screen-tablet) {
+  .map__stat {
+    height: 396px;
+  }
 }

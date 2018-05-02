@@ -2,13 +2,16 @@
   display: flex;
   justify-content: center;
   margin: 0;
-  padding: 20px 0;
+  padding-top: 22px;
+  padding-bottom: 18px;
+  padding-left: 0;
+  padding-right: 0;
   list-style: none;
   border-bottom: 1px solid $grey-3;
 }
 
 .social__item {
-  margin: 0 15px;
+  margin: 0 20px;
 }
 
 .social__link {
@@ -28,5 +31,21 @@
     fill: #666666;
     width: 10px;
     height: 19px;
+  }
+}
+
+@media (min-width: $screen-tablet) {
+  .social__list {
+    margin-left: 30px;
+    padding: 0;
+    border-bottom: 0;
+  }
+
+  .social__item {
+    margin: 0 17px;
+  }
+
+  .social__link {
+    transform: scale(1.47);
   }
 }

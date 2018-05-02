@@ -1,12 +1,13 @@
 .illustration {
-  padding-bottom: 20px;
+  padding-bottom: 37px;
   background-color: $grey-1;
 }
 
 
 .illustration__title {
-  line-height: 1.67;
   margin-bottom: 23px;
+  line-height: 1.67;
+  letter-spacing: -1.2px;
 }
 
 .illustration__description {
@@ -24,37 +25,66 @@
 
 .illustration__expenses {
   display: block;
+  margin: 0 auto;
   line-height: 1.43;
   text-transform: uppercase;
-  margin: 0 auto;
   color: $dark-3;
+  letter-spacing: -0.3px;
 }
 
 .illustration__wrapper {
   padding-top: 20px;
   padding-bottom: 35px;
+  padding-right: 21px;
 }
 
 @media (min-width: $screen-tablet) {
   .illustration {
+    padding-bottom: 0;
     background-color: #ffffff;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      border-bottom: 1px solid $grey-2;
+    }
+  }
+
+  .illustration__count {
+    justify-content: stretch;
   }
 
   .illustration__wrapper {
     height: 420px;
+    margin-bottom: 20px;
+    padding-top: 27px;
+  }
+
+  .illustration__title {
+    margin-bottom: 40px;
+    letter-spacing: -1.9px;
   }
 
   .illustration__description {
     @include font (16, 1.5);
+    margin-bottom: 55px;
   }
 
   .illustration__expenses {
-    @include font (20, 1);
+    @include font (20, 1.5);
+    width: 195px;
+    margin: 0;
+    margin-left: auto;
+    text-align: right;
   }
 
   .illustration__slider {
-    height: 630px;
-    background-image: linear-gradient(#ffffff 33%, $grey-1 33%);
+    // height: 630px;
+    padding-bottom: 75px;
+    background-image: linear-gradient(to right, $grey-1 0%, #f2f2f2 50%, #eaeaea 50%, #eaeaea 100%);
+    background-position: 0 180px;
+    background-repeat: no-repeat;
   }
 }
 
