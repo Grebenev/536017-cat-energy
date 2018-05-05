@@ -138,12 +138,7 @@
    background-image: url("/img/gift-photo-mobile@2x.jpg");
   }
 
-  &::after {
-    margin-left: -55/2 + px;
 
-    @include pos (60px, 60px, 64px, 50%);
-    @include b-image("icon-gift.svg", transparent);
-  }
 
   @media (min-width: $screen-tablet) {
     min-height: 199px;
@@ -157,6 +152,17 @@
   @media (min-width: $screen-desktop) {
     width: 245px;
     min-height: 290px;
+  }
+}
+
+.additional__action::after {
+  margin-left: -55/2 + px;
+
+  @include pos (60px, 60px, 64px, 50%);
+  @include b-image("icon-gift.svg", transparent);
+
+  @media (min-width: $screen-tablet) {
+    left: 118px;
   }
 }
 
