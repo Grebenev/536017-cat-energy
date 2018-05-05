@@ -11,24 +11,43 @@
   }
 
   &--stripe {
-    display: flex;
+
+    // display: flex;  - выкл флекс
+    // ------- my add (1) -------
+    display: inline-block;
+    background-color: #fff;
+    // ------- -end- ---------
 
     @include font(24, 1);
     text-align: left;
 
     @media (min-width: $screen-tablet) {
       @include font(36, 1);
+
     }
   }
 
   &--stripe::after {
     content: "";
-    align-self: center;
-    flex-grow: 1;
-    // margin-top: 15px;
-    margin-left: 5px;
-    width: 10px;
+    // align-self: center;  - off
+    // flex-grow: 1; - выкл флекс
+
+    // ------- my add (1) -------
+    display: block;
+    position: absolute;
+    z-index: -1;
+    // left: 0;
+    left: 40%;
+    right: 0;
+    margin-top: -11px;
+    // ------- -end- ---------
+    margin-left: 20px;
+    // width: 10px; - выкл флекс
     height: 3px;
     background-color: $green-2;
+
+    @media (min-width: $screen-tablet) {
+      left: 0;
+    }
   }
 }

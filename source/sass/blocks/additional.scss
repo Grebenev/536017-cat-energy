@@ -11,17 +11,26 @@
 .additional__title {
   padding-top: 30px;
   padding-bottom: 30px;
-  padding-left: 20px;
-  padding-right: 0;
+  // padding-left: 20px;  - выкл флекс
+  padding-right: 20px;
   letter-spacing: -0.8px;
 
-  @media (min-width: $screen-desktop) {
-    width: 100%;
+  @media (min-width: $screen-tablet) {
+    // ------- my add (1) -------
+    padding-top: 70px;
+    padding-bottom: 40px;
+    padding-left: 40px;
+    letter-spacing: -1.3px;
+    // ------- -end- ---------
   }
 }
 
 .additional__list {
   margin: 0;
+  // ------- my add (1) -------
+  padding: 0;
+  // ------- -end- ---------
+
   margin-bottom: 40px;
   list-style: none;
 
