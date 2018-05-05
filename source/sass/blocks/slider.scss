@@ -1,3 +1,9 @@
+.slider {
+  @media (min-width: $screen-tablet) {
+    // position: relative;
+  }
+}
+
 .slider__control {
   position: relative;
   display: flex;
@@ -6,6 +12,15 @@
   width: 210px;
   margin: 0 auto;
   padding: 0;
+
+  @media (min-width: $screen-tablet) {
+    position: relative;
+    width: auto;
+  }
+
+  @media (min-width: $screen-desktop) {
+    justify-content: flex-end;
+  }
 }
 
 .slider__text {
@@ -13,8 +28,16 @@
   color: $dark-3;
   text-transform: uppercase;
 
+  @media (min-width: $screen-tablet) {
+    @include font(20, 1);
+  }
+
   &:first-of-type {
     margin-right: 19px;
+
+    @media (min-width: $screen-tablet) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -25,6 +48,14 @@
   background-color: #ffffff;
   border: 1px solid #cdcdcd;
   border-radius: 15px;
+
+  @media (min-width: $screen-tablet) {
+    width: 428px;
+    height: 6px;
+    margin: 0 22px;
+    background-color: #cdcdcd;
+    border: 0;
+  }
 }
 
 .slider__button {
@@ -35,35 +66,8 @@
   height: 6px;
   background-color: $green-2;
   border-radius: 15px;
-}
 
-.slider__image-wrap {
-  margin-bottom: 27px;
-}
-
-@media (min-width: $screen-tablet) { //320 -> 768
-  .slider__control {
-    position: relative;
-    width: auto;
-  }
-
-  .slider__text {
-    @include font(20, 1);
-
-    &:first-of-type {
-      margin-right: 0;
-    }
-  }
-
-  .slider__toggler {
-    width: 428px;
-    height: 6px;
-    margin: 0 22px;
-    background-color: #cdcdcd;
-    border: 0;
-  }
-
-  .slider__button {
+  @media (min-width: $screen-tablet) {
     position: absolute;
     top: -8px;
     width: 34px;
@@ -81,5 +85,50 @@
     &--after {
       left: 48%;
     }
+  }
+
+  @media (min-width: $screen-desktop) {
+    left: 50%;
+  }
+}
+
+.slider__image-wrap {
+  margin-bottom: 27px;
+
+  @media (min-width: $screen-desktop) {
+    margin-bottom: 40px;
+  }
+
+  &--before {
+    @media (min-width: $screen-tablet) {
+      position: absolute;
+      overflow: hidden;
+      z-index: 1;
+      width: 345px;
+    }
+  }
+
+  &--after {
+    display: none;
+
+    @media (min-width: $screen-tablet) {
+      position: relative;
+      display: block;
+      width: 345px;
+    }
+  }
+}
+
+.slider__image {
+  @media (min-width: $screen-tablet) {
+    width: 690px;
+    max-width: 690px;
+    height: 517px;
+    display: block;
+    margin: 0 auto;
+  }
+
+  @media (min-width: $screen-desktop) {
+    max-width: 600px;
   }
 }

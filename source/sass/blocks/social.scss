@@ -8,10 +8,20 @@
   padding-right: 0;
   list-style: none;
   border-bottom: 1px solid $grey-3;
+
+  @media (min-width: $screen-tablet) {
+    margin-left: 30px;
+    padding: 0;
+    border-bottom: 0;
+  }
 }
 
 .social__item {
   margin: 0 20px;
+
+  @media (min-width: $screen-tablet) {
+    margin: 0 17px;
+  }
 }
 
 .social__link {
@@ -32,20 +42,8 @@
     width: 10px;
     height: 19px;
   }
-}
 
-@media (min-width: $screen-tablet) {
-  .social__list {
-    margin-left: 30px;
-    padding: 0;
-    border-bottom: 0;
-  }
-
-  .social__item {
-    margin: 0 17px;
-  }
-
-  .social__link {
+  @media (min-width: $screen-tablet) {
     transform: scale(1.47);
   }
 }

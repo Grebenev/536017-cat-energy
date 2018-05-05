@@ -1,5 +1,9 @@
 .function {
   margin-bottom: 40px;
+
+  @media (min-width: $screen-tablet) {
+    margin-bottom: 0;
+  }
 }
 
 .function__title {
@@ -7,11 +11,27 @@
   line-height: 1.67;
   text-align: left;
   letter-spacing: -1px;
+
+  @media (min-width: $screen-tablet) {
+    margin-bottom: 20px;
+    letter-spacing: -1.5px;
+  }
 }
 
 .function__list {
   margin: 0;
   padding: 0;
+
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $screen-desktop) {
+    display: flex;
+    flex-wrap: wrap;
+  }
 }
 
 .function__item {
@@ -21,6 +41,26 @@
   list-style: none;
   font-family: "Arial", sans-serif;
 
+  @media (min-width: $screen-tablet) {
+    position: relative;
+    display: block;
+    width: 324px;
+    min-height: 230px;
+    margin-top: 30px;
+    margin-bottom: 55px;
+    padding-right: 74px;
+    counter-increment: counter;
+    line-height: 1.7;
+  }
+
+  @media (min-width: $screen-desktop) {
+    width: 245px;
+    padding-right: 0;
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+
+
   &::before {
     content: "";
     display: block;
@@ -28,6 +68,29 @@
     width: 60px;
     height: 60px;
     margin-right: 20px;
+
+    @media (min-width: $screen-tablet) {
+      width: 80px;
+      height: 80px;
+      margin-right: 20px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &::after {
+    @media (min-width: $screen-tablet) {
+
+      content: counter(counter);
+      position: absolute;
+      display: block;
+      top: -30px;
+      left: 102px;
+      z-index: -1;
+
+      @include font (282, 1);
+      font-family: "Oswald", "Arial", sans-serif;
+      color: $grey-1;
+    }
   }
 
   &:nth-child(1)::before {
@@ -44,65 +107,5 @@
 
   &:nth-child(4)::before {
     @include b-image ("advantage-clock@1x.png", $green-2, center);
-  }
-}
-
-@media (min-width: $screen-tablet) {
-  .function {
-    margin-bottom: 0;
-  }
-
-  .function__title {
-    margin-bottom: 20px;
-    letter-spacing: -1.5px;
-  }
-
-  .function__list {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  .function__item {
-    position: relative;
-    display: block;
-    width: 324px;
-    min-height: 230px;
-    margin-top: 30px;
-    margin-bottom: 55px;
-    padding-right: 74px;
-    counter-increment: counter;
-    line-height: 1.7;
-
-    &::before {
-      width: 80px;
-      height: 80px;
-      margin-right: 20px;
-      margin-bottom: 30px;
-    }
-
-    &::after {
-      content: counter(counter);
-      position: absolute;
-      display: block;
-      top: -30px;
-      left: 102px;
-      z-index: -1;
-
-      @include font (282, 1);
-      font-family: "Oswald", "Arial", sans-serif;
-      color: $grey-1;
-    }
-  }
-}
-
-@media (min-width: $screen-desktop) {
-  .function__list {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .function__item {
-    width: 245px;
   }
 }

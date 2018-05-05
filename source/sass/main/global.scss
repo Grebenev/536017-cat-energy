@@ -8,19 +8,19 @@ body {
   @include font(14, 1.29);
   color: $dark-1;
   background-color: #ffffff;
-}
 
-@media (min-width: $screen-tablet) {
-  body {
+  @media (min-width: $screen-tablet) {
     width: $screen-tablet;
+
+    @include font(16, 1.5);
+  }
+
+  @media (min-width: $screen-desktop) {
+    width: auto;
+    max-width: none;
   }
 }
 
-@media (min-width: $screen-desktop) {
-  body {
-    width: $screen-desktop;
-  }
-}
 
 *,
 *::before,

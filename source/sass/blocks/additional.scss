@@ -1,5 +1,11 @@
 .additional {
   margin-bottom: 35px;
+
+  @media (min-width: $screen-desktop) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
 
 .additional__title {
@@ -7,12 +13,22 @@
   padding-bottom: 30px;
   padding-left: 20px;
   padding-right: 0;
+  letter-spacing: -0.8px;
+
+  @media (min-width: $screen-desktop) {
+    width: 100%;
+  }
 }
 
 .additional__list {
   margin: 0;
   margin-bottom: 40px;
   list-style: none;
+
+  @media (min-width: $screen-desktop) {
+    padding-left: 40px;
+    width: 895px;
+  }
 }
 
 .additional__item {
@@ -24,9 +40,20 @@
   padding-left: 0;
   padding-right: 0;
   border-bottom: 1px solid $grey-4;
+  border-top: 1px solid $grey-4;
 
-  &:first-child .additional__product {
-    border-top: 1px solid $grey-4;
+  @media (min-width: $screen-tablet) {
+    border-bottom: 0;
+    margin-bottom: 0;
+    border: 1px solid $grey-2;
+  }
+
+  @media (min-width: $screen-desktop) {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 15px 0;
   }
 }
 
@@ -40,6 +67,10 @@
   @include font(16, 1.25);
   color: $dark-3;
   text-transform: uppercase;
+
+  @media (min-width: $screen-desktop) {
+    width: auto;
+  }
 }
 
 .additional__text {
@@ -76,56 +107,21 @@
     @include pos (60px, 60px, 64px, 50%);
     @include b-image("icon-gift.svg", transparent);
   }
+
+  @media (min-width: $screen-desktop) {
+    width: 245px;
+    min-height: 290px;
+  }
+}
+
+.additional__button {
+  @media (min-width: $screen-desktop) {
+    width: 245px;
+    margin-bottom: 0;
+  }
 }
 
 .additional__bonus {
   padding-left: $padding-mobile;
   padding-right: $padding-mobile;
-}
-
-@media (min-width: $screen-tablet) {
-  .additional__item {
-    border-bottom: 0;
-    margin-bottom: 0;
-    border: 1px solid $grey-2;
-  }
-}
-
-@media (min-width: $screen-desktop) {
-  .additional {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .additional__item {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 15px 0;
-  }
-
-  .additional__product {
-    width: auto;
-  }
-
-  .additional__list {
-    padding-left: 40px;
-    width: 895px;
-  }
-
-  .additional__title {
-    width: 100%;
-  }
-
-  .additional__button {
-    width: 245px;
-    margin-bottom: 0;
-  }
-
-  .additional__action {
-    width: 245px;
-    min-height: 290px;
-  }
 }

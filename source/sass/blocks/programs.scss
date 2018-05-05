@@ -1,3 +1,9 @@
+.programs {
+  @media (min-width: $screen-desktop) {
+    margin-bottom: 30px;
+  }
+}
+
 .programs__button {
   margin-bottom: 20px;
 }
@@ -6,6 +12,11 @@
   padding: 0;
   margin: 0;
   list-style: none;
+
+  @media (min-width: $screen-desktop) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .programs__item {
@@ -13,6 +24,23 @@
   padding: 25px 20px 20px;
   background-color: $grey-1;
   margin-bottom: 20px;
+
+  @media (min-width: $screen-tablet) {
+    padding-top: 77px;
+    padding-right: 60px;
+    padding-bottom: 60px;
+    padding-left: 55px;
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    width: 570px;
+    min-height: 370px;
+    padding-top: 45px;
+    padding-right: 55px;
+    padding-bottom: 60px;
+    padding-left: 50px;
+  }
 }
 
 .programs__title {
@@ -28,6 +56,19 @@
   text-transform: uppercase;
   margin-bottom: 25px;
 
+  @media (min-width: $screen-tablet) {
+    position: static;
+    width: 380px;
+    margin-bottom: 24px;
+
+    @include font (36, 1);
+    letter-spacing: -1px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    margin-bottom: 40px;
+  }
+
   &::before {
     content: "";
     width: 50px;
@@ -35,18 +76,45 @@
     margin-right: 20px;
     background-color: $green-2;
     border-radius: 50%;
+
+    @media (min-width: $screen-tablet) {
+      @include pos (200px, 200px, 92px, 63%);
+    }
+
+    @media (min-width: $screen-desktop) {
+      position: static;
+      top: 0;
+      left: 0;
+      width: 100px;
+      height: 100px;
+      margin-right: 64px;
+    }
   }
 
-  &--slim {
-    &::after {
-      @include pos (35px, 49px, 0, 10px);
-      @include b-image("icon-cat-slim.svg", transparent);
+  &--slim::after {
+    @include pos (35px, 49px, 0, 10px);
+    @include b-image("icon-cat-slim.svg", transparent);
+
+    @media (min-width: $screen-tablet) {
+      @include pos (140px, 194px, 80px, 478px);
+    }
+
+    @media (min-width: $screen-desktop) {
+      @include pos (79px, 97px, 41px, 12%);
     }
   }
 
   &--pro::after {
     @include pos (67px, 28px, 10px, -7px);
     @include b-image("icon-cat-pro.svg", transparent);
+
+    @media (min-width: $screen-tablet) {
+      @include pos (268px, 112px, 135px, 413px);
+    }
+
+    @media (min-width: $screen-desktop) {
+      @include pos (134px, 56px, 68px, 6%);
+    }
   }
 }
 
@@ -58,10 +126,30 @@
   font-family: "Arial", sans-serif;
   border-bottom: 1px solid $grey-3;
 
-  @media (max-width: $screen-tablet) {
+  @media (max-width: $screen-tablet) { // for mobile ONLY
     br {
       display: none;
     }
+  }
+
+  @media (min-width: $screen-desktop) {
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: $screen-tablet) {
+    width: 380px;
+    margin-bottom: 57px;
+    padding-bottom: 0;
+
+    @include font (16, 1.5);
+    border: 0;
+  }
+
+  @media (min-width: $screen-desktop) {
+    width: auto;
+    margin-bottom: 32px;
   }
 }
 
@@ -91,79 +179,8 @@
   &:active::after {
     opacity: 0.3;
   }
-}
 
-@media (min-width: $screen-tablet) { //320 -> 768
-
-  .programs__item {
-    padding: 77px 60px 60px 55px;
-    margin-bottom: 30px;
-  }
-
-  .programs__title {
-    position: static;
-    width: 380px;
-    margin-bottom: 24px;
-
-    @include font (36, 1);
-    letter-spacing: -1px;
-
-    &::before {
-      @include pos (200px, 200px, 92px, 63%);
-    }
-
-    &--slim::after {
-      @include pos (140px, 194px, 80px, 478px);
-    }
-
-    &--pro::after {
-      @include pos (268px, 112px, 135px, 413px);
-    }
-  }
-
-  .programs__description {
-    width: 380px;
-    margin-bottom: 57px;
-    padding-bottom: 0;
-
-    @include font (16, 1.5);
-    border: 0;
-  }
-
-  .programs__link {
+  @media (min-width: $screen-tablet) {
     @include font (20, 1);
-  }
-}
-
-@media (min-width: $screen-desktop) { //768 -> 1200
-
-  .programs__list {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .programs__item {
-    width: 570px;
-    min-height: 370px;
-    padding: 45px 55px 60px 50px;
-  }
-
-  .programs__title {
-    &::before {
-      position: static;
-      top: 0;
-      left: 0;
-      width: 100px;
-      height: 100px;
-      margin-right: 60px;
-    }
-
-    &--slim::after {
-      @include pos (79px, 97px, 46px, 13%);
-    }
-
-    &--pro::after {
-      @include pos (134px, 56px, 78px, 7%);
-    }
   }
 }
