@@ -16,23 +16,27 @@
   letter-spacing: -0.8px;
 
   @media (min-width: $screen-tablet) {
-    // ------- my add (1) -------
     padding-top: 70px;
     padding-bottom: 40px;
     padding-left: 40px;
+    margin-bottom: 40px;
     letter-spacing: -1.3px;
-    // ------- -end- ---------
   }
 }
 
+
 .additional__list {
   margin: 0;
-  // ------- my add (1) -------
   padding: 0;
-  // ------- -end- ---------
-
   margin-bottom: 40px;
   list-style: none;
+
+  @media (min-width: $screen-tablet) {
+    // padding-left: 40px;
+    // padding-right: 40px;
+    // ------- -end- ---------
+    margin-bottom: 70px;
+  }
 
   @media (min-width: $screen-desktop) {
     padding-left: 40px;
@@ -52,8 +56,14 @@
   border-top: 1px solid $grey-4;
 
   @media (min-width: $screen-tablet) {
-    border-bottom: 0;
+    justify-content: flex-start;
+    align-items: baseline;
+    padding-top: 26px;
+    padding-bottom: 26px;
+    padding-left: 40px;
+    padding-right: 40px;
     margin-bottom: 0;
+    border-bottom: 0;
     border: 1px solid $grey-2;
   }
 
@@ -77,6 +87,13 @@
   color: $dark-3;
   text-transform: uppercase;
 
+  @media (min-width: $screen-tablet) {
+    @include font(20, 1);
+    margin: 0;
+    padding-bottom: 25px;
+    width: 170px;
+  }
+
   @media (min-width: $screen-desktop) {
     width: auto;
   }
@@ -89,6 +106,13 @@
   @include font(14, 1);
   font-family: "Arial", sans-serif;
   text-align: right;
+
+  @media (min-width: $screen-tablet) {
+    margin-left: auto;
+    &:last-of-type {
+      margin-left: 65px;
+    }
+  }
 }
 
 .additional__action {
@@ -110,11 +134,24 @@
   @include b-image("gift-photo-mobile@1x.jpg", $green-1, center);
   background-size: cover;
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+   background-image: url("/img/gift-photo-mobile@2x.jpg");
+  }
+
   &::after {
     margin-left: -55/2 + px;
 
     @include pos (60px, 60px, 64px, 50%);
     @include b-image("icon-gift.svg", transparent);
+  }
+
+  @media (min-width: $screen-tablet) {
+    min-height: 199px;
+    background-image: url("/img/gift-photo-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("/img/gift-photo-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: $screen-desktop) {
@@ -133,4 +170,8 @@
 .additional__bonus {
   padding-left: $padding-mobile;
   padding-right: $padding-mobile;
+
+  @media (min-width: $screen-tablet) {
+    padding: 0;
+  }
 }
