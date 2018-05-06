@@ -1,5 +1,8 @@
 .footer {
   background-color: $grey-1;
+}
+
+.footer__wrapper {
   padding-left: $padding-mobile;
   padding-right: $padding-mobile;
 
@@ -14,10 +17,12 @@
   }
 
   @media (min-width: $screen-desktop) {
+    width: 1300px;
+    margin: 0  auto;
     padding-top: 52px;
-    padding-left: 150px;
-    padding-right: 150px;
-    padding-bottom: 30px;
+    padding-left: $padding-desktop;
+    padding-right: $padding-desktop;
+    padding-bottom: 60px;
   }
 }
 

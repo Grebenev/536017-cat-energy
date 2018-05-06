@@ -100,9 +100,10 @@
 
     @media (min-width: $screen-tablet) {
       max-width: 170px;
-      padding: 20px 0;
+      padding: 22px 0;
       margin: 0 auto;
       margin-bottom: 60px;
+      letter-spacing: -0.1px;
     }
   }
 
@@ -123,6 +124,10 @@
       height: 60px;
       margin-top: 55px;
       margin-bottom: 55px;
+    }
+
+    @media (min-width: $screen-desktop) {
+      // margin-bottom: 40px;
     }
   }
 

@@ -6,50 +6,61 @@
   }
 
   @media (min-width: $screen-desktop) {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 1300px;
+    margin: 0  auto;
+    margin-bottom: 85px;
   }
 }
 
 .additional__title {
   padding-top: 30px;
   padding-bottom: 30px;
-  // padding-left: 20px;  - выкл флекс
   padding-right: 20px;
+  padding-left: $padding-mobile;
   letter-spacing: -0.8px;
 
   @media (min-width: $screen-tablet) {
-    padding-top: 70px;
-    padding-bottom: 40px;
-    padding-left: 40px;
-    margin-bottom: 40px;
+    margin-left: 30px;
+    margin-top: 70px;
+    margin-bottom: 80px;
+    padding: 0;
+    padding-right: 40px;
+    padding-left: 35px;
     letter-spacing: -1.3px;
   }
 
   @media (min-width: $screen-desktop) {
-    padding-left: 0;
-    padding-top: 80px;
+    margin-left: 0;
+    margin-top: 75px;
   }
 }
 
+.additional__wrapper {
+  @media (min-width: $screen-desktop) {
+    display: flex;
+  }
+}
 
 .additional__list {
   margin: 0;
   padding: 0;
+  padding-left: $padding-mobile;
+  padding-right: $padding-mobile;
   margin-bottom: 40px;
   list-style: none;
 
   @media (min-width: $screen-tablet) {
-    // padding-left: 40px;
-    // padding-right: 40px;
-    // ------- -end- ---------
+    padding-left: $padding-tablet;
+    padding-right: $padding-tablet;
+
     margin-bottom: 70px;
   }
 
   @media (min-width: $screen-desktop) {
-    padding-left: 40px;
-    width: 895px;
+    width: 975px;
+    margin-bottom: 0;
+    padding-left: $padding-desktop;
+    padding-right: $padding-desktop;
   }
 }
 
@@ -58,7 +69,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 0;
-  padding-bottom: 16px;
+  padding-bottom: 15px;
   padding-left: 0;
   padding-right: 0;
   border-bottom: 1px solid $grey-4;
@@ -77,10 +88,12 @@
   }
 
   @media (min-width: $screen-desktop) {
-    display: flex;
-    align-items: baseline;
-    justify-content: space-around;
+    // display: flex;
+    // align-items: baseline;
+    // justify-content: space-around;
     flex-wrap: wrap;
+    // width: 895px;
+    // margin-right: 80px;
     padding: 15px 0;
   }
 }
@@ -105,6 +118,7 @@
 
   @media (min-width: $screen-desktop) {
     width: auto;
+    padding-bottom: 0;
   }
 }
 
@@ -118,8 +132,24 @@
 
   @media (min-width: $screen-tablet) {
     margin-left: auto;
+
     &:last-of-type {
       margin-left: 65px;
+    }
+  }
+
+  @media (min-width: $screen-desktop) {
+    min-width: 245px;
+    padding-bottom: 0;
+
+    @include font (16, 1.25);
+    text-align: left;
+
+    &:last-of-type {
+      min-width: 80px;
+      margin: 0;
+      // margin-left: 112px;
+      // margin-right: 38px;
     }
   }
 }
@@ -144,20 +174,27 @@
   background-size: cover;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-   background-image: url("/img/gift-photo-mobile@2x.jpg");
+    background-image: url("/img/gift-photo-mobile@2x.jpg");
   }
 
   @media (min-width: $screen-tablet) {
+    min-height: 200px;
     padding-right: 118px;
     padding-bottom: 55px;
+
     span {
       width: 165px;
       margin-left: auto;
       align-self: center;
       text-align: left;
+
+      @media (min-width: $screen-desktop) {
+        margin-top: auto;
+        margin-left: 0;
+        text-align: center;
+      }
     }
 
-    min-height: 199px;
     background-image: url("/img/gift-photo-tablet@1x.jpg");
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
@@ -168,6 +205,16 @@
   @media (min-width: $screen-desktop) {
     width: 245px;
     min-height: 290px;
+    padding-top: 65px;
+    padding-right: 30px;
+    padding-bottom: 45px;
+    padding-left: 45px;
+
+    background-image: url("/img/gift-photo-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("/img/gift-photo-desktop@2x.jpg");
+    }
   }
 }
 
@@ -179,6 +226,10 @@
 
   @media (min-width: $screen-tablet) {
     left: 118px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    left: 122px;
   }
 }
 
@@ -194,6 +245,12 @@
   padding-right: $padding-mobile;
 
   @media (min-width: $screen-tablet) {
-    padding: 0;
+    padding-left: $padding-tablet;
+    padding-right: $padding-tablet;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding-left: $padding-desktop;
+    padding-right: $padding-desktop;
   }
 }
