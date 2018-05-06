@@ -1,6 +1,10 @@
 .additional {
   margin-bottom: 35px;
 
+  @media (min-width: $screen-tablet) {
+    margin-bottom: 77px;
+  }
+
   @media (min-width: $screen-desktop) {
     display: flex;
     flex-wrap: wrap;
@@ -21,6 +25,11 @@
     padding-left: 40px;
     margin-bottom: 40px;
     letter-spacing: -1.3px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding-left: 0;
+    padding-top: 80px;
   }
 }
 
@@ -138,9 +147,16 @@
    background-image: url("/img/gift-photo-mobile@2x.jpg");
   }
 
-
-
   @media (min-width: $screen-tablet) {
+    padding-right: 118px;
+    padding-bottom: 55px;
+    span {
+      width: 165px;
+      margin-left: auto;
+      align-self: center;
+      text-align: left;
+    }
+
     min-height: 199px;
     background-image: url("/img/gift-photo-tablet@1x.jpg");
 

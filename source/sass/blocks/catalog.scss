@@ -5,6 +5,8 @@
 
   @media (min-width: $screen-desktop) {
     padding: 0 $padding-desktop;
+    max-width: 1300px;
+    margin: 0 auto;
   }
 }
 
@@ -22,6 +24,10 @@
     padding-right: 0;
     letter-spacing: -1.9px;
     border-bottom: none;
+  }
+
+  @media (min-width: $screen-desktop) {
+    padding-top: 70px;
   }
 }
 
@@ -50,12 +56,19 @@
   text-transform: uppercase;
 
   @media (min-width: $screen-tablet) {
+    width: auto;
+    max-width: 150px;
     padding: 0;
     margin: 0 auto;
     margin-bottom: 20px;
-    max-width: 135px;
+
 
     @include font (20, 1);
+  }
+
+  @media (min-width: $screen-desktop) {
+
+    // max-width: 150px;
   }
 }
 
@@ -132,11 +145,7 @@
   @media (min-width: $screen-desktop) {
     width: 245px;
     text-align: center;
-    background-image: linear-gradient(to bottom, transparent 0%, transparent 20%, $grey-1 20%, $grey-1 100%);
-
-    &:not(:nth-child(4n)) {
-      margin-right: 20px;
-    }
+    background-image: linear-gradient(to bottom, transparent 0%, transparent 24%, $grey-1 24%, $grey-1 100%);
   }
 }
 

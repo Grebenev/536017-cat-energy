@@ -14,8 +14,15 @@
     padding-top: 4px;
     padding-left: $padding-desktop;
     padding-right: $padding-desktop;
+
+    &--catalog {
+      padding-top: 55px;
+    }
+
   }
 }
+
+
 
 .navigation__toggle {
   display: none;
