@@ -20,20 +20,6 @@
     @media (min-width: $screen-tablet) {
       @include font(36, 1);
     }
-
-    @media (min-width: $screen-desktop) {
-      &::before {
-        content: "";
-        display: block;
-        position: relative;
-        z-index: 5;
-        height: 3px;
-        background-color: red;
-        right: 50%;
-        left: 0;
-        margin-right: 370px;
-      }
-    }
   }
 
   &--stripe::after {

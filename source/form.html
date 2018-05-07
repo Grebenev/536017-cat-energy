@@ -16,9 +16,13 @@
       <symbol id="htmlacademy" viewBox="0 0 27 34"><path d="M13.62.017L13.472 0 0 1.412v24.661l13.472 8.017 13.43-7.99.042-.026V1.412L13.62.017zm11.399 12.11L13.495 5.334l-.001-.104-.087.05-.088-.056v.109L1.925 12.118V3.147l11.547-1.212 11.547 1.212v8.98zm-11.614-5.34L24.923 13.5l-4.479 2.64-7.093-4.221-.013 1.415 5.904 3.513-.86.507-5.031-2.992-.013 1.415 3.827 2.275-.782.523-3.032-1.787-.013 1.413 1.852 1.091-1.8 1.081-11.356-6.751 11.371-6.835zm-11.48 8.34l11.411 6.791.015 1.044-7.941-4.728-.015 1.416 7.979 4.796.017 1.076-7.972-4.741-.013 1.415 8.021 4.821.045.026 8.143-4.872v-1.268l-.011-.148v-3.761l3.415-2.036v10.02L13.472 31.85 1.925 24.979v-9.852z"/></symbol>
     </svg>
     <header class="header">
-      <nav class="navigation">
+      <nav class="navigation navigation--wrapper">
         <a class="navigation__logo">
-          <img class="navigation__icon" src="img/logo-mobile.svg" width="191" height="40" alt="Логотип">
+          <picture>
+            <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+            <img class="navigation__icon" src="img/logo-mobile.svg"  alt="Логотип Cat Energy">
+          </picture>
         </a>
         <ul class="navigation__list navigation__list--opened">
           <button class="navigation__toggle" type="button"></button>
@@ -79,10 +83,16 @@
           <h2 class="form__title title title--stripe">Контактные данные<br>(владельца кота)</h2>
           <div class="form__wrapper form__wrapper--owner-data">
             <label class="form__label">E-mail:*
-              <input class="form__input" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              <input class="form__input form__input--mail" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              <svg class="form__icon" width="17" height="13">
+                <use xlink:href="#mail"></use>
+              </svg>
             </label>
             <label class="form__label">Телефон:*
-              <input class="form__input" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+              <input class="form__input form__input--phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+              <svg class="form__icon" width="20" height="20">
+                <use xlink:href="#phone"></use>
+              </svg>
             </label>
           </div>
           <h2 class="form__title title title--stripe">Комментарий</h2>
@@ -92,7 +102,7 @@
             </label>
           </div>
           <h2 class="form__title title title--stripe">Дополнительно</h2>
-          <div class="wrapper">
+          <div class="form__check-list">
             <ul class="form__list form__list--checkbox">
               <li class="form__item">
                 <label class="form__label">
@@ -124,46 +134,63 @@
           </div>
         </form>
       </section>
+      <section class="map">
+        <h2 class="visually-hidden">Как нас найти</h2>
+        <div class="wrapper wrapper--grey">
+          <div class="contacts map__contacts contacts--grey">
+            <p class="contacts__title">приглашаем <br>к сотрудничеству дилеров!</p>
+            <p class="contacts__text">ул. Большая Конюшенная, д. 19/8 <span class="contacts__city">Санкт-Петербург</span></p>
+          </div>
+        </div>
+        <picture>
+          <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
+          <img class="map__static" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Схема проезда ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
+        </picture>
+        <div class="map__interactive" id="mapid"></div>
+      </section>
     </main>
     <footer class="footer">
-      <div class="footer__logo">
-        <img class="footer__image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип">
+      <div class="footer__wrapper">
+        <div class="footer__logo">
+          <img class="footer__image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип">
+        </div>
+        <section class="social footer__social">
+          <h2 class="visually-hidden">Соцсети</h2>
+          <ul class="social__list">
+            <li class="social__item">
+              <a class="social__link social__link--vk" href="#">
+                <span class="visually-hidden">Вконтакте</span>
+                <svg class="social__link social__link--vk" width="22" height="12">
+                  <use xlink:href="#vk-small"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--inst" href="#">
+                <span class="visually-hidden">Инстаграм</span>
+                <svg class="social__link social__link--inst" width="17" height="16">
+                  <use xlink:href="#inst-small"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a class="social__link social__link--fb" href="#">
+                <span class="visually-hidden">Фейсбук</span>
+                <svg class="social__link social__link--fb" width="10" height="19">
+                  <use xlink:href="#fb-small"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+          <span class="footer__text">HTML Academy</span>
+          <svg class="footer__icon" width="27" height="34">
+            <use xlink:href="#htmlacademy"></use>
+          </svg>
+        </a>
       </div>
-      <section class="social footer__social">
-        <h2 class="visually-hidden">Соцсети</h2>
-        <ul class="social__list">
-          <li class="social__item">
-            <a class="social__link social__link--vk" href="#">
-              <span class="visually-hidden">Вконтакте</span>
-              <svg class="social__link social__link--vk" width="22" height="12">
-                <use xlink:href="#vk-small"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--inst" href="#">
-              <span class="visually-hidden">Инстаграм</span>
-              <svg class="social__link social__link--inst" width="17" height="16">
-                <use xlink:href="#inst-small"></use>
-              </svg>
-            </a>
-          </li>
-          <li class="social__item">
-            <a class="social__link social__link--fb" href="#">
-              <span class="visually-hidden">Фейсбук</span>
-              <svg class="social__link social__link--fb" width="10" height="19">
-                <use xlink:href="#fb-small"></use>
-              </svg>
-            </a>
-          </li>
-        </ul>
-      </section>
-      <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive">
-        <span class="footer__text">HTML Academy</span>
-        <svg class="footer__icon" width="27" height="34">
-          <use xlink:href="#htmlacademy"></use>
-        </svg>
-      </a>
     </footer>
     <script src="js/script.js"></script>
   </body>

@@ -1,5 +1,9 @@
 .form__form {
   @include font(16, 1.13);
+
+  @media (min-width: $screen-tablet) {
+    margin-bottom: 75px;
+  }
 }
 
 .form__text {
@@ -11,14 +15,28 @@
   @include font(14, 1.2);
   text-transform: uppercase;
   color: $dark-3;
+
+  @media (min-width: $screen-tablet) {
+    width: 414px;
+    margin-bottom: 65px;
+    padding-left: 70px;
+    padding-right: 0;
+
+    @include font(20, 1.5);
+  }
 }
 
 .form__label {
+  position: relative;
   display: flex;
   align-items: baseline;
-  margin-bottom: 12px;
+  margin-bottom: 15px;
   text-transform: uppercase;
   color: $dark-2;
+
+  @media (min-width: $screen-tablet) {
+    margin-bottom: 20px;
+  }
 }
 
 .form__input {
@@ -28,6 +46,39 @@
   margin-left: 13px;
   font: inherit;
   text-transform: uppercase;
+  outline: none;
+  border: solid 1px rgba($grey-4, 0.5);
+
+  @media (min-width: $screen-tablet) {
+    margin-left: 20px;
+  }
+
+  &:hover {
+    border: solid 1px rgba($grey-4, 1);
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 0 2px $dark-1;
+  }
+
+  &:focus:invalid {
+    box-shadow: inset 0 0 0 2px red;
+  }
+}
+
+.form__icon {
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  fill: $dark-2;
+}
+
+.form__input:focus + .form__icon {
+  fill: $green-2;
+}
+
+.form__input:focus:invalid + .form__icon {
+  fill: $red-1;
 }
 
 .form__radio {
@@ -43,8 +94,14 @@
   margin-right: 15px;
   padding: 8px;
   background-clip: content-box;
-  border: 1px solid #ebebeb;
+  border: 1px solid $grey-4;
   border-radius: 50%;
+
+  @media (min-width: $screen-tablet) {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
 }
 
 input:checked + .form__radio::before {
@@ -58,9 +115,29 @@ input:focus + .form__radio::before {
 .form__textarea {
   width: 100%;
   height: 150px;
+  margin-top: 10px;
   padding: 13px;
   font: inherit;
   text-transform: uppercase;
+  letter-spacing: -0.4px;
+  outline: none;
+  border: solid 1px rgba($grey-4, 0.5);
+
+  &:hover {
+    border: solid 1px rgba($grey-4, 1);
+  }
+
+  &:focus {
+    box-shadow: inset 0 0 0 2px $dark-1;
+  }
+
+  @media (min-width: $screen-tablet) {
+    height: 174px;
+    margin: 0 40px;
+    padding: 10px 20px;
+
+    @include font (20, 1.5);
+  }
 }
 
 .form__list {
@@ -68,98 +145,22 @@ input:focus + .form__radio::before {
   margin-bottom: 24px;
   list-style: none;
 
+  @media (min-width: $screen-tablet) {
+    @include font (20, 1);
+  }
+
   &--cat-data {
     padding: 0;
     padding-left: $padding-mobile;
     padding-right: $padding-mobile;
-  }
 
-  &--program {
-    margin-bottom: 24px;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border: 1px solid $grey-3;
-  }
-
-  &--program .form__label {
-    margin-bottom: 13px;
-  }
-
-  &--checkbox {
-    padding: 0;
-  }
-}
-
-.form__title {
-  margin: 0;
-  padding-top: 16px;
-  padding-bottom: 25px;
-  padding-right: 0;
-  padding-left: 20px;
-  text-align: left;
-  letter-spacing: -1px;
-}
-
-.form__wrapper {
-  &--owner-data {
-    margin-top: 7px;
-    padding-left: $padding-mobile;
-    padding-right: $padding-mobile;
-
-    .form__input {
-      margin-left: 8px;
-    }
-  }
-}
-
-.form__item:last-of-type .form__label {
-  margin-bottom: 0;
-}
-
-@media (min-width: $screen-tablet) {
-  .form__wrapper {
-    @include font(20, 1);
-  }
-
-  .form__list {
-    &--program {
-      margin: 0;
-      padding: 0;
-      border: 1px solid #cdcdcd;
+    @media (min-width: $screen-tablet) {
+      margin-bottom: 70px;
+      padding-left: 70px;
+      padding-right: 70px;
     }
 
-    &--checkbox {
-      display: flex;
-      flex-wrap: wrap;
-    }
-  }
-
-  .form__button {
-    width: auto;
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  .form__item {
-    padding: 0 50px;
-  }
-
-  .form__text {
-    @include font(20, 1.5);
-  }
-}
-
-
-@media (min-width: $screen-desktop) {
-  .form__list {
-    &--program {
-      display: inline-block;
-      vertical-align: middle;
-      width: 40%;
-      padding: 25px;
-    }
-
-    &--cat-data {
+    @media (min-width: $screen-desktop) {
       display: inline-block;
       vertical-align: middle;
       width: 50%;
@@ -168,19 +169,233 @@ input:focus + .form__radio::before {
     }
   }
 
-  .form__item {
+  &--program {
+    margin-bottom: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border: 1px solid $grey-3;
+
+    @media (min-width: $screen-tablet) {
+      margin: 0;
+      margin-left: 70px;
+      margin-right: 70px;
+      margin-bottom: 20px;
+      padding: 24px 28px;
+      border: 1px solid $grey-4;
+    }
+
+    @media (min-width: $screen-desktop) {
+      display: inline-block;
+      vertical-align: middle;
+      width: 40%;
+      padding: 25px;
+    }
+  }
+
+  &--program .form__label {
+    margin-bottom: 13px;
+  }
+
+  &--checkbox {
+    padding: 0;
+    margin-top: 7px;
+    margin-bottom: 35px;
+
+    @media (min-width: $screen-tablet) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin-bottom: 25px;
+    }
+  }
+
+  &--checkbox .form__label {
+    margin-bottom: 12px;
+
+    @media (min-width: $screen-tablet) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &--checkbox .form__item {
+    @media (min-width: $screen-tablet) {
+      width: calc(50% - 30px);
+    }
+  }
+}
+
+.form__item {
+  @media (min-width: $screen-tablet) {
     padding: 0;
   }
 
-  .form__wrapper--owner-data {
-    display: flex;
+  @media (min-width: $screen-desktop) {
+    padding: 0;
+  }
+}
 
-    .form__label {
+.form__checkbox {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    margin-right: 15px;
+    border: 1px solid $grey-4;
+
+    @media (min-width: $screen-tablet) {
+      width: 40px;
+      height: 40px;
+    }
+  }
+
+  &:hover::before {
+    border: 1px solid $grey-4;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+input:checked + .form__checkbox::after {
+  content: "";
+  position: absolute;
+  top: 7px;
+  left: 5px;
+  width: 20px;
+  height: 11px;
+  border: 2px solid $green-1;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-50deg);
+}
+
+
+.form__title {
+  margin: 0;
+  padding-top: 16px;
+  padding-bottom: 25px;
+  padding-right: 22px;
+  padding-left: 20px;
+  text-align: left;
+  letter-spacing: -1px;
+
+  @media (min-width: $screen-tablet) {
+    &:not(:first-child) {
+      margin-left: 40px;
+    }
+
+    &:nth-of-type(2) {
+      margin-bottom: 50px;
+      padding-top: 45px;
+    }
+
+    &:nth-of-type(3) {
+      margin-bottom: 25px;
+      padding-top: 45px;
+    }
+
+    &:first-child {
+      letter-spacing: -1.9px;
+    }
+
+    padding-top: 55px;
+    padding-left: 30px;
+    padding-right: 40px;
+    // letter-spacing: -1.9px;
+    margin-bottom: 30px;
+
+    br {
+      display: none;
+    }
+  }
+}
+
+.form__wrapper {
+  @media (min-width: $screen-tablet) {
+    @include font(20, 1);
+  }
+
+  &--owner-data {
+    margin-top: 7px;
+    padding-left: $padding-mobile;
+    padding-right: $padding-mobile;
+
+    @media (min-width: $screen-tablet) {
+      margin-top: 20px;
+      margin-bottom: 0;
+      padding-left: 70px;
+      padding-right: 70px;
+    }
+
+    @media (min-width: $screen-desktop) {
+      display: flex;
+    }
+  }
+
+  &--owner-data .form__label {
+    @media (min-width: $screen-desktop) {
       width: 50%;
 
       &:not(:last-child) {
         margin-right: 75px;
       }
     }
+  }
+
+  &--owner-data .form__input {
+    margin-left: 8px;
+
+    @media (min-width: $screen-tablet) {
+      margin-left: 15px;
+    }
+  }
+}
+
+.form__item:last-of-type .form__label {
+  margin-bottom: 0;
+}
+
+.form__button {
+  @media (min-width: $screen-tablet) {
+    width: auto;
+    margin-right: 58px;
+    padding-left: 65px;
+    padding-right: 65px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    @include font(20, 1);
+  }
+}
+
+.form__required {
+  display: block;
+  padding-top: 20px;
+  padding-bottom: 34px;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+  color: $dark-1;
+
+  @media (min-width: $screen-tablet) {
+    display: inline-block;
+    width: auto;
+    padding: 0;
+  }
+}
+
+.form__check-list {
+  padding-left: $padding-mobile;
+  padding-right: $padding-mobile;
+
+  @media (min-width: $screen-tablet) {
+    margin: 0 40px;
+    padding-left: $padding-tablet;
+    padding-right: $padding-tablet;
   }
 }
