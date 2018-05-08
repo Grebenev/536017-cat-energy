@@ -6,7 +6,7 @@
   margin-bottom: 20px;
   padding-top: 20px;
 
-  @media (max-width: $screen-tablet) {  // for mobile ONLY
+  @media (max-width: 767px) {  // for mobile ONLY
     height: 480px;
     background-image: $top-gradient;
 
@@ -40,7 +40,7 @@
 }
 
 .basic__title {
-  @media (max-width: $screen-tablet) {  // for mobile ONLY
+  @media (max-width: 767px) {  // for mobile ONLY
     padding: 10px 0;
     padding-bottom: 20px;
     line-height: 1;
@@ -67,19 +67,16 @@
   padding: 5px 0;
 
   @include font(14, 1);
-  color: $dark-3;
   text-align: center;
   text-transform: uppercase;
-
-  @media (max-width: $screen-tablet) {  // for mobile ONLY
-    color: #ffffff;
-    letter-spacing: -0.3px;
-  }
+  color: #ffffff;
+  letter-spacing: -0.3px;
 
   @media (min-width: $screen-tablet) {
     @include font (20, 1);
     letter-spacing: -0.5px;
     margin-bottom: 42px;
+    color: $dark-3;
   }
 
   @media (min-width: $screen-desktop) {

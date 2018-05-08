@@ -1,12 +1,12 @@
 var Body = document.querySelector("body");
 var Button = document.querySelector(".navigation__toggle");
-var List_status = document.querySelector(".navigation__list--opened");
+var List_status = document.querySelector(".navigation__inner--opened");
 Body.classList.remove("no-js");
 Body.classList.add("js");
-List_status.classList.toggle("navigation__list--closed");
+List_status.classList.toggle("navigation__inner--closed");
 Button.addEventListener("click", function (evt) {
   evt.preventDefault();
-  List_status.classList.toggle("navigation__list--closed");
+  List_status.classList.toggle("navigation__inner--closed");
 });
 
 function initialize() {

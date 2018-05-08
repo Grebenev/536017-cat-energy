@@ -6,7 +6,7 @@
   }
 
   @media (min-width: $screen-desktop) {
-    width: 1300px;
+    width: $screen-desktop;
     margin: 0  auto;
     margin-bottom: 85px;
   }
@@ -88,12 +88,7 @@
   }
 
   @media (min-width: $screen-desktop) {
-    // display: flex;
-    // align-items: baseline;
-    // justify-content: space-around;
     flex-wrap: wrap;
-    // width: 895px;
-    // margin-right: 80px;
     padding: 15px 0;
   }
 }
@@ -148,8 +143,6 @@
     &:last-of-type {
       min-width: 80px;
       margin: 0;
-      // margin-left: 112px;
-      // margin-right: 38px;
     }
   }
 }

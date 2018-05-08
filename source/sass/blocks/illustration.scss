@@ -21,7 +21,6 @@
   @media (min-width: $screen-desktop) {
     display: flex;
     justify-content: center;
-    box-shadow: inset  0 0 1px  black;
     background-image: linear-gradient(#ffffff 29%, $grey-1 29%);
   }
 }
@@ -119,14 +118,11 @@
     height: 652px;
     margin: 0;
     padding: 0;
-    box-shadow: inset  0 0 1px  black;
-    // background-image: linear-gradient(#ffffff 33%, $grey-1 33%);
   }
 }
 
 .illustration__slider {
   @media (min-width: $screen-tablet) {
-    // height: 630px;
     padding-bottom: 75px;
     background-image: linear-gradient(to right, $grey-1 0%, #f2f2f2 50%, #eaeaea 50%, #eaeaea 100%);
     background-position: 0 180px;
@@ -134,7 +130,6 @@
   }
 
   @media (min-width: $screen-desktop) {
-    box-shadow: inset  0 0 1px  red;
     width: 610px;
     padding: 0;
     height: 652px;

@@ -24,7 +24,7 @@
 .navigation__toggle {
   display: none;
 
-  @media (max-width: $screen-tablet) { // for mobile ONLY!
+  @media (max-width: 767px) { // for mobile ONLY!
     position: absolute;
     top: 23px;
     right: 20px;
@@ -66,12 +66,8 @@
   }
 }
 
-.navigation__list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-
-  @media (max-width: $screen-tablet) { // for mobile ONLY!
+.navigation__inner {
+  @media (max-width: 767px) { // for mobile ONLY!
     &--closed .navigation__item {
       display: none;
     }
@@ -84,6 +80,12 @@
       @include b-image("icon-mobile-menu.svg");
     }
   }
+}
+
+.navigation__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
 
   @media (min-width: $screen-tablet) {
     display: flex;

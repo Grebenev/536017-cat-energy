@@ -17,7 +17,7 @@
   }
 
   @media (min-width: $screen-desktop) {
-    width: 1300px;
+    width: $screen-desktop;
     margin: 0  auto;
     padding-top: 52px;
     padding-left: $padding-desktop;

@@ -10,8 +10,7 @@
   }
 
   @media (min-width: $screen-desktop) {
-    // position: relative;
-    width: 1300px;
+    width: $screen-desktop;
     margin: 0 auto;
     padding: 0 40px;
   }

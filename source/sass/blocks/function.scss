@@ -79,7 +79,6 @@
 
   &::after {
     @media (min-width: $screen-tablet) {
-
       content: counter(counter);
       position: absolute;
       display: block;
