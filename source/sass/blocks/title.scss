@@ -21,11 +21,13 @@
       @include font(36, 1);
     }
 
-    @media (max-width: $screen-tablet) { //for mobile ONLY!
-      &:first-of-type::after {
-        transform: translateY(-37px);
-      }
-    }
+    // &:first-of-type::after {
+    //   @media (max-width: 767px) { //for mobile ONLY!
+    //     background-color: red;
+    //     transform: translateY(-37px);
+    //   }
+    // }
+
   }
 
   &--stripe::after {
