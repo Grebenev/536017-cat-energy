@@ -7,14 +7,12 @@
 }
 
 .function__title {
-  margin-bottom: 26px;
+  margin-bottom: 24px;
   line-height: 1.67;
   text-align: left;
-  letter-spacing: -1px;
 
   @media (min-width: $screen-tablet) {
-    margin-bottom: 20px;
-    letter-spacing: -1.5px;
+    margin-bottom: 19px;
   }
 }
 
@@ -47,10 +45,10 @@
     width: 324px;
     min-height: 230px;
     margin-top: 30px;
-    margin-bottom: 55px;
+    margin-bottom: 56px;
     padding-right: 74px;
     counter-increment: counter;
-    line-height: 1.7;
+    line-height: 1.5;
   }
 
   @media (min-width: $screen-desktop) {
@@ -92,19 +90,38 @@
     }
   }
 
+  &::before {
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-size: 50px 50px;
+    }
+  }
+
   &:nth-child(1)::before {
     @include b-image ("advantage-leaf@1x.png", $green-2,  center);
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("/img/advantage-leaf@2x.png");
+    }
   }
 
   &:nth-child(2)::before {
     @include b-image ("advantage-powder@1x.png", $green-2, center);
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("/img/advantage-powder@2x.png");
+    }
   }
 
   &:nth-child(3)::before {
     @include b-image ("advantage-dining@1x.png", $green-2,  center);
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("/img/advantage-dining@2x.png");
+    }
   }
 
   &:nth-child(4)::before {
     @include b-image ("advantage-clock@1x.png", $green-2, center);
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("/img/advantage-clock@2x.png");
+    }
   }
 }

@@ -14,19 +14,17 @@
 
 .additional__title {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 33px;
   padding-right: 20px;
   padding-left: $padding-mobile;
-  letter-spacing: -0.8px;
 
   @media (min-width: $screen-tablet) {
     margin-left: 30px;
-    margin-top: 70px;
+    margin-top: 65px;
     margin-bottom: 80px;
     padding: 0;
     padding-right: 40px;
     padding-left: 35px;
-    letter-spacing: -1.3px;
   }
 
   @media (min-width: $screen-desktop) {
@@ -46,7 +44,7 @@
   padding: 0;
   padding-left: $padding-mobile;
   padding-right: $padding-mobile;
-  margin-bottom: 40px;
+  margin-bottom: 41px;
   list-style: none;
 
   @media (min-width: $screen-tablet) {
@@ -69,7 +67,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 0;
-  padding-bottom: 15px;
+  padding-bottom: 16px;
   padding-left: 0;
   padding-right: 0;
   border-bottom: 1px solid $grey-4;
@@ -95,7 +93,7 @@
 
 .additional__product {
   width: 100%;
-  margin-top: 13px;
+  margin-top: 12px;
   margin-bottom: 11px;
   margin-left: 0;
   margin-right: 0;
@@ -119,7 +117,7 @@
 
 .additional__text {
   display: inline-block;
-  padding-bottom: 15px;
+  padding-bottom: 14px;
 
   @include font(14, 1);
   font-family: "Arial", sans-serif;

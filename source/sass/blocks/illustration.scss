@@ -28,11 +28,9 @@
 .illustration__title {
   margin-bottom: 23px;
   line-height: 1.67;
-  letter-spacing: -1.2px;
 
   @media (min-width: $screen-tablet) {
     margin-bottom: 40px;
-    letter-spacing: -1.9px;
   }
 
   @media (min-width: $screen-desktop) {
@@ -48,7 +46,7 @@
 
   @media (min-width: $screen-tablet) {
     @include font (16, 1.5);
-    margin-bottom: 55px;
+    margin-bottom: 54px;
   }
 
   @media (min-width: $screen-desktop) {
@@ -79,14 +77,13 @@
   line-height: 1.43;
   text-transform: uppercase;
   color: $dark-3;
-  letter-spacing: -0.3px;
 
   @media (min-width: $screen-tablet) {
     @include font (20, 1.5);
     width: 195px;
     margin: 0;
     margin-left: auto;
-    margin-right: 7px;
+    margin-right: 10px;
     text-align: right;
   }
 
@@ -94,7 +91,6 @@
     width: 100%;
     margin-top: 60px;
     text-align: left;
-    letter-spacing: -0.5px;
 
     span {
       margin-left: 60px;
@@ -104,7 +100,7 @@
 
 .illustration__wrapper {
   padding-top: 20px;
-  padding-bottom: 35px;
+  padding-bottom: 33px;
   padding-right: 21px;
 
   @media (min-width: $screen-tablet) {

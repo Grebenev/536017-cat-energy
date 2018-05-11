@@ -2,7 +2,6 @@
   @include font(24, 1);
   color: $dark-3;
   text-transform: uppercase;
-  letter-spacing: -1px;
 
   @media (min-width: $screen-tablet) {
     @include font (30, 1.2);
@@ -38,7 +37,7 @@
 .count__wrapper {
   position: relative;
   width: 123px;
-  margin-bottom: 35px;
+  margin-bottom: 34px;
   padding: 15px 10px;
   text-align: center;
   border: 1px solid $grey-4;

@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-    <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
-    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
+    <!-- <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+    <link rel="preload" href="fonts/oswaldmedium.woff2" as="font"> -->
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body class ="no-js">
@@ -20,15 +20,16 @@
     <header class="header">
       <div class="header__navigation">
         <nav class="navigation">
-          <a class="navigation__logo">
-            <picture>
-              <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
-              <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-              <img class="navigation__icon" src="img/logo-mobile.svg"  alt="Логотип Cat Energy">
-            </picture>
-          </a>
-          <div class ="navigation__inner navigation__inner--opened">
+          <div class="navigation__logo">
+            <a class="navigation__logo-link">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
+                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                <img class="navigation__icon" src="img/logo-mobile.svg"  alt="Логотип Cat Energy">
+              </picture>
+            </a>
             <button class="navigation__toggle" type="button"></button>
+          </div>
             <ul class="navigation__list navigation__list--white">
               <li class="navigation__item">
                 <a class="navigation__link">Главная</a>
@@ -40,7 +41,6 @@
                 <a class="navigation__link" href="form.html">Подбор программы</a>
               </li>
             </ul>
-          </div>
         </nav>
         <section class="basic wrapper">
           <h1 class="title basic__title">Функциональное питание для котов</h1>
@@ -113,13 +113,11 @@
             </picture>
           </div>
           <div class="slider__control">
-            <label class="slider__text" for="slider-before">Было
+            <label class="slider__text" for="slider-before">Было</label>
+            <div class="slider__toggler">
               <span class="slider__button slider__button--before"></span>
-            </label>
-            <div class="slider__toggler"></div>
-            <label class="slider__text" for="slider-after">Стало
-              <span class="slider__button slider__button--after"></span>
-            </label>
+            </div>
+            <label class="slider__text" for="slider-after">Стало</label>
           </div>
         </div>
       </section>
@@ -182,6 +180,7 @@
       </div>
     </footer>
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+    <script src="js/picturefill.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

@@ -36,7 +36,6 @@
   @include font(16, 1.25);
   color: $dark-3;
   text-transform: uppercase;
-  letter-spacing: -0.4px;
 
   @media (min-width: $screen-tablet) {
     width: 200px;

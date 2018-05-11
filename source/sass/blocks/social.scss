@@ -1,49 +1,65 @@
 .social__list {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
   margin: 0;
   padding-top: 22px;
   padding-bottom: 18px;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 55px;
+  padding-right: 63px;
   list-style: none;
   border-bottom: 1px solid $grey-3;
 
   @media (min-width: $screen-tablet) {
-    margin-left: 30px;
+    // margin-left: 30px;
     padding: 0;
     border-bottom: 0;
   }
 }
 
 .social__item {
-  margin: 0 20px;
+  // margin: 0 20px;
 
   @media (min-width: $screen-tablet) {
-    margin: 0 17px;
+    // margin: 0 17px;
+    margin-left: 25px;
   }
 }
 
 .social__link {
+  fill: #666666;
+
   &--vk {
-    fill: #666666;
     width: 22px;
     height: 12px;
+
+    @media (min-width: $screen-tablet) {
+      width: 30px;
+      height: 16px;
+    }
   }
 
   &--inst {
-    fill: #666666;
     width: 17px;
     height: 16px;
+
+    @media (min-width: $screen-tablet) {
+      width: 23px;
+      height: 23px;
+    }
   }
 
   &--fb {
-    fill: #666666;
     width: 10px;
     height: 19px;
+
+    @media (min-width: $screen-tablet) {
+      width: 14px;
+      height: 28px;
+    }
   }
 
   @media (min-width: $screen-tablet) {
-    transform: scale(1.47);
+    // transform: scale(1.47);
   }
 }

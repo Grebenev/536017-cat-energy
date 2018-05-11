@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: flex-start;
   min-height: 305px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   padding-top: 20px;
 
   @media (max-width: 767px) {  // for mobile ONLY
@@ -22,9 +22,9 @@
     position: relative;
     justify-content: flex-start;
     align-items: flex-start;
-    min-height: 868px;
+    min-height: 864px;
     margin-bottom: 0;
-    padding-top: 60px;
+    padding-top: 56px;
     padding-bottom: 0;
     padding-left: 120px;
     padding-right: 120px;
@@ -41,10 +41,9 @@
 
 .basic__title {
   @media (max-width: 767px) {  // for mobile ONLY
-    padding: 10px 0;
-    padding-bottom: 20px;
+    padding: 9px 0;
+    padding-bottom: 18px;
     line-height: 1;
-    letter-spacing: -1px;
     color: #ffffff;
     text-align: center;
   }
@@ -52,29 +51,22 @@
   @media (min-width: $screen-tablet) {
     align-self: flex-start;
     width: 450px;
-    letter-spacing: -2.2px;
     margin-bottom: 35px;
-  }
-
-  @media (min-width: $screen-desktop) {
-    letter-spacing: -2px;
   }
 }
 
 .basic__slogan {
   margin: 0;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   padding: 5px 0;
 
   @include font(14, 1);
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
-  letter-spacing: -0.3px;
 
   @media (min-width: $screen-tablet) {
     @include font (20, 1);
-    letter-spacing: -0.5px;
     margin-bottom: 42px;
     color: $dark-3;
   }
@@ -105,7 +97,7 @@
 
 .basic__button {
   @media (min-width: $screen-tablet) {
-    order: 1;
+    // order: 1;
     width: auto;
     padding-top: 14px;
     padding-bottom: 14px;

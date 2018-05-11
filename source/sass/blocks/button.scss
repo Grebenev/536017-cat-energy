@@ -4,15 +4,30 @@
   padding: 11px;
   font: inherit;
   color: #ffffff;
-  letter-spacing: -0.4px;
   text-align: center;
   text-transform: uppercase;
   background-color: $green-2;
   border: none;
 
+  &:hover {
+    background-color: $green-3;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
   &--grey {
     color: $dark-1;
     background-color: $grey-1;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 }
 

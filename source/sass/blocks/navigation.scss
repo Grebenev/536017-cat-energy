@@ -1,15 +1,14 @@
 .navigation {
-  position: relative;
 
   @media (min-width: $screen-tablet) {
     display: flex;
     justify-content: space-between;
     padding: 0 $padding-tablet;
-    padding-top: 22px;
+    padding-top: 23px;
   }
 
   @media (min-width: $screen-desktop) {
-    max-width: 1300px;
+    max-width: $screen-desktop;
     margin: 0 auto;
     padding-top: 4px;
     padding-left: $padding-desktop;
@@ -25,20 +24,26 @@
   display: none;
 
   @media (max-width: 767px) { // for mobile ONLY!
-    position: absolute;
-    top: 23px;
-    right: 20px;
     display: block;
     width: 25px;
     height: 20px;
+    padding: 0;
     border: none;
     background-color: #ffffff;
     cursor: pointer;
+    @include b-image("icon-close.svg");
+
+    &--off {
+      background-image: url("/img/icon-mobile-menu.svg");
+    }
   }
 }
 
 .navigation__logo {
-  display: block;
+  // display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 13px;
   padding-bottom: 11px;
   padding-left: $padding-mobile;
@@ -48,6 +53,18 @@
   @media (min-width: $screen-tablet) {
     padding: 0;
     border: 0;
+  }
+}
+
+.navigation__logo-link {
+  @media (min-width: $screen-desktop) {
+    &[href]:hover {
+      opacity: 0.8;
+    }
+
+    &[href]:active {
+      opacity: 0.6;
+    }
   }
 }
 
@@ -66,26 +83,16 @@
   }
 }
 
-.navigation__inner {
-  @media (max-width: 767px) { // for mobile ONLY!
-    &--closed .navigation__item {
-      display: none;
-    }
-
-    &--opened .navigation__toggle {
-      @include b-image("icon-close.svg");
-    }
-
-    &--closed .navigation__toggle {
-      @include b-image("icon-mobile-menu.svg");
-    }
-  }
-}
-
 .navigation__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+   @media (max-width: 767px) {
+     &--off .navigation__item {
+       display: none;
+     }
+   }
 
   @media (min-width: $screen-tablet) {
     display: flex;
@@ -124,7 +131,14 @@
 .navigation__link {
   @include font(20, 1, 500);
   text-transform: uppercase;
-  letter-spacing: -0.5px;
+
+  &[href]:hover {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $screen-tablet) {
     display: block;
