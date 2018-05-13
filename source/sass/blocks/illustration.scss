@@ -21,7 +21,11 @@
   @media (min-width: $screen-desktop) {
     display: flex;
     justify-content: center;
-    background-image: linear-gradient(#ffffff 29%, $grey-1 29%);
+    // background-image: linear-gradient(#ffffff 29%, $grey-1 29%);
+    background-image: linear-gradient(to right,#f2f2f2 0%,#f2f2f2 50%,#ebebeb 50%,#ebebeb 100%);
+    background-position: center bottom;
+    background-size: 100% calc(100% - 188px);
+    background-repeat: no-repeat;
   }
 }
 
@@ -34,8 +38,8 @@
   }
 
   @media (min-width: $screen-desktop) {
-    padding-top: 35px;
-    margin-bottom: 125px;
+    padding-top: 39px;
+    margin-bottom: 123px;
   }
 }
 

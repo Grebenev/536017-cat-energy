@@ -11,23 +11,28 @@
   border-bottom: 1px solid $grey-3;
 
   @media (min-width: $screen-tablet) {
-    // margin-left: 30px;
     padding: 0;
     border-bottom: 0;
   }
 }
 
 .social__item {
-  // margin: 0 20px;
 
   @media (min-width: $screen-tablet) {
-    // margin: 0 17px;
     margin-left: 25px;
   }
 }
 
-.social__link {
+.social__svg {
   fill: #666666;
+
+  &:hover {
+    fill: $green-2;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &--vk {
     width: 22px;

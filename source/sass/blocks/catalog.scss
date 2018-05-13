@@ -98,6 +98,10 @@
       margin: 0 auto;
       margin-bottom: 60px;
     }
+
+    @media (min-width: $screen-desktop) {
+      margin-bottom: 45px;
+    }
   }
 
   &:last-child::before {
@@ -117,6 +121,10 @@
       height: 60px;
       margin-top: 55px;
       margin-bottom: 50px;
+    }
+
+    @media (min-width: $screen-desktop) {
+      margin-top: 50px;
     }
   }
 
