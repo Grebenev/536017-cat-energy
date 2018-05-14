@@ -130,6 +130,7 @@
     left: -7px;
     width: 67px;
     height: 28px;
+
     @include b-image("icon-cat-pro.svg", transparent);
 
     @media (min-width: $screen-tablet) {
@@ -178,7 +179,6 @@
 }
 
 .programs__link {
-
   svg {
     width: 40px;
   }
@@ -204,6 +204,7 @@
 
   &:hover::after {
     width: 33px;
+
     @include b-image("icon-right-arrow-verylong.svg", transparent);
   }
 
@@ -213,7 +214,6 @@
   }
 
   @media (min-width: $screen-tablet) {
-
     @include font (20, 1);
   }
 }

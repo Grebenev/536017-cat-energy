@@ -40,7 +40,7 @@
   position: relative;
   display: flex;
   align-items: baseline;
-  margin-bottom: 13px;
+  margin-bottom: 14px;
   text-transform: uppercase;
   color: $dark-2;
 
@@ -71,6 +71,7 @@
 
   &--name {
     margin-left: 14px;
+
     @media (min-width: $screen-tablet) {
       margin-left: 16px;
     }
@@ -78,6 +79,7 @@
 
   &--weight {
     margin-left: 16px;
+
     @media (min-width: $screen-tablet) {
       margin-left: 20px;
     }
@@ -85,6 +87,7 @@
 
   &--age {
     margin-left: 16px;
+
     @media (min-width: $screen-tablet) {
       margin-left: 18px;
     }
@@ -92,6 +95,7 @@
 
   &--mail {
     margin-left: 10px;
+
     @media (min-width: $screen-tablet) {
       margin-left: 18px;
     }
@@ -103,6 +107,7 @@
 
   &--phone {
     margin-left: 10px;
+
     @media (min-width: $screen-tablet) {
       margin-left: 16px;
     }
@@ -144,7 +149,6 @@
 .form__radio {
   display: flex;
   align-items: center;
-
 
   &::before {
     content: "";
@@ -288,6 +292,10 @@ input:focus + .form__radio::before {
   &--checkbox .form__label {
     margin-bottom: 12px;
 
+    &:active {
+      opacity: 0.3;
+    }
+
     @media (min-width: $screen-tablet) {
       margin-bottom: 30px;
     }
@@ -336,10 +344,6 @@ input:focus + .form__radio::before {
 
   &:hover::before {
     border-color: #bababa;
-  }
-
-  &:active {
-    opacity: 0.3;
   }
 }
 

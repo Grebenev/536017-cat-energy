@@ -1,5 +1,13 @@
 .map {
-  position: relative;
+  @media (min-width: $screen-tablet) {
+    position: relative;
+  }
+}
+
+.map__area {
+  @media (max-width: $screen-tablet) {
+    position: relative;
+  }
 }
 
 .map__static {
@@ -16,9 +24,8 @@
 }
 
 .map__interactive {
-
   position: absolute;
-  top: 111px;
+  top: 0;
   right: 0;
   bottom: 0;
   left: 0;
@@ -26,11 +33,6 @@
   z-index: 1;
 
   @media (min-width: $screen-tablet) {
-    top: 200px;
     min-height: 396px;
-  }
-
-  @media (min-width: $screen-desktop) {
-    top: 0;
   }
 }

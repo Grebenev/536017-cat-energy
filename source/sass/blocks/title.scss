@@ -20,14 +20,6 @@
     @media (min-width: $screen-tablet) {
       @include font(36, 1);
     }
-
-    // &:first-of-type::after {
-    //   @media (max-width: 767px) { //for mobile ONLY!
-    //     background-color: red;
-    //     transform: translateY(-37px);
-    //   }
-    // }
-
   }
 
   &--stripe::after {

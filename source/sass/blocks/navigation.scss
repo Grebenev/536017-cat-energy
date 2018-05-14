@@ -1,5 +1,4 @@
 .navigation {
-
   @media (min-width: $screen-tablet) {
     display: flex;
     justify-content: space-between;
@@ -31,6 +30,7 @@
     border: none;
     background-color: #ffffff;
     cursor: pointer;
+
     @include b-image("icon-close.svg");
 
     &--off {
@@ -88,11 +88,11 @@
   padding: 0;
   list-style: none;
 
-   @media (max-width: 767px) {
-     &--off .navigation__item {
-       display: none;
-     }
-   }
+  @media (max-width: 767px) {
+    &--off .navigation__item {
+      display: none;
+    }
+  }
 
   @media (min-width: $screen-tablet) {
     display: flex;

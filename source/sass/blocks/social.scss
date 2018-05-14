@@ -17,22 +17,25 @@
 }
 
 .social__item {
-
   @media (min-width: $screen-tablet) {
     margin-left: 25px;
   }
 }
 
-.social__svg {
-  fill: #666666;
+.social__link {
+  display: block;
 
-  &:hover {
+  &:hover .social__svg {
     fill: $green-2;
   }
 
-  &:active {
+  &:active .social__svg {
     opacity: 0.3;
   }
+}
+
+.social__svg {
+  fill: #666666;
 
   &--vk {
     width: 22px;
