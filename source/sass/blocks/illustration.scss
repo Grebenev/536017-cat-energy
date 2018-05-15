@@ -109,7 +109,7 @@
 
   @media (min-width: $screen-tablet) {
     min-height: 420px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     padding-top: 27px;
   }
 
@@ -125,7 +125,7 @@
   @media (min-width: $screen-tablet) {
     padding-bottom: 75px;
     background-image: linear-gradient(to right, $grey-1 0%, #f2f2f2 50%, #eaeaea 50%, #eaeaea 100%);
-    background-position: 0 180px;
+    background-position: 0 170px;
     background-repeat: no-repeat;
   }
 
@@ -133,6 +133,7 @@
     width: 610px;
     padding: 0;
     min-height: 652px;
+    background-image: linear-gradient(to right, $grey-1 0%, #f2f2f2 53%, #eaeaea 53%, #eaeaea 100%);
     background-position: 0 188px;
   }
 }

@@ -210,9 +210,10 @@
 }
 
 .additional__action::after {
-  margin-left: -55/2 + px;
 
   @include pos (60px, 60px, 64px, 50%);
+  margin-left: -27px;
+
   @include b-image("icon-gift.svg", transparent);
 
   @media (min-width: $screen-tablet) {

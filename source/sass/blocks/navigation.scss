@@ -40,7 +40,6 @@
 }
 
 .navigation__logo {
-  // display: block;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -51,6 +50,7 @@
   border-bottom: 1px solid $grey-2;
 
   @media (min-width: $screen-tablet) {
+    margin-right: 70px;
     padding: 0;
     border: 0;
   }
@@ -96,6 +96,7 @@
 
   @media (min-width: $screen-tablet) {
     display: flex;
+    flex-wrap: wrap;
   }
 
   @media (min-width: $screen-desktop) {
