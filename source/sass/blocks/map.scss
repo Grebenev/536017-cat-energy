@@ -1,11 +1,11 @@
 .map {
-  @media (min-width: $screen-tablet) {
+  @media (min-width: $screen-desktop) {
     position: relative;
   }
 }
 
 .map__area {
-  @media (max-width: $screen-tablet) {
+  @media (max-width: $screen-desktop) {
     position: relative;
   }
 }

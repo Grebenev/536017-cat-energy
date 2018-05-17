@@ -131,6 +131,7 @@
   @media (min-width: $screen-tablet) {
     display: block;
     width: 324px;
+    margin-bottom: 2px;
     padding-left: 40px;
     padding-right: 37px;
     padding-bottom: 40px;
@@ -234,5 +235,11 @@
       height: auto;
       flex-shrink: 0;
     }
+  }
+}
+
+.catalog__button {
+  @media (min-width: $screen-tablet) {
+    padding: 9px 27px;
   }
 }

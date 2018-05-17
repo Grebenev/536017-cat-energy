@@ -8,11 +8,12 @@
 
 .function__title {
   margin-bottom: 24px;
-  line-height: 1.67;
+  // line-height: 1.67;
   text-align: left;
 
   @media (min-width: $screen-tablet) {
-    margin-bottom: 19px;
+    margin-bottom: 40px;
+    padding-top: 19px;
   }
 }
 

@@ -67,7 +67,7 @@
   flex-wrap: wrap;
   justify-content: space-between;
   padding-top: 0;
-  padding-bottom: 16px;
+  padding-bottom: 17px;
   padding-left: 0;
   padding-right: 0;
   border-bottom: 1px solid $grey-4;
@@ -77,9 +77,9 @@
     justify-content: flex-start;
     align-items: baseline;
     padding-top: 26px;
-    padding-bottom: 26px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding-bottom: 28px;
+    padding-left: 38px;
+    padding-right: 37px;
     margin-bottom: 0;
     border-bottom: 0;
     border: 1px solid $grey-2;
@@ -87,18 +87,18 @@
 
   @media (min-width: $screen-desktop) {
     flex-wrap: wrap;
-    padding: 15px 0;
+    padding: 16px 0;
   }
 }
 
 .additional__product {
   width: 100%;
-  margin-top: 12px;
-  margin-bottom: 11px;
+  margin-top: 15px;
+  margin-bottom: 12px;
   margin-left: 0;
   margin-right: 0;
 
-  @include font(16, 1.25);
+  @include font(16, 1);
   color: $dark-3;
   text-transform: uppercase;
 
@@ -126,8 +126,10 @@
   @media (min-width: $screen-tablet) {
     margin-left: auto;
 
+    @include font(16, 20px);
+
     &:last-of-type {
-      margin-left: 65px;
+      margin-left: 50px;
     }
   }
 
@@ -210,7 +212,6 @@
 }
 
 .additional__action::after {
-
   @include pos (60px, 60px, 64px, 50%);
   margin-left: -27px;
 
@@ -226,6 +227,10 @@
 }
 
 .additional__button {
+  @media (min-width: $screen-tablet) {
+    padding: 9px 27px;
+  }
+
   @media (min-width: $screen-desktop) {
     width: 245px;
     margin-bottom: 0;

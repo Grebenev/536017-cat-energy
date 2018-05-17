@@ -4,7 +4,7 @@
   text-transform: uppercase;
 
   @media (min-width: $screen-tablet) {
-    @include font (30, 1.2);
+    @include font (30, 37px);
   }
 }
 

@@ -19,6 +19,14 @@
     color: rgba(255, 255, 255, 0.3);
   }
 
+  &--index {
+    @include font (14, 18px);
+
+    @media (min-width: $screen-tablet) {
+      @include font (20, 1);
+    }
+  }
+
   &--grey {
     color: $dark-1;
     background-color: $grey-1;
