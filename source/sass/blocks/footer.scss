@@ -25,6 +25,7 @@
 }
 
 .footer__logo {
+  display: block;
   padding-top: 37px;
   padding-bottom: 28px;
   padding-left: 0;
@@ -35,6 +36,14 @@
   @media (min-width: $screen-tablet) {
     padding: 0;
     border: 0;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
 

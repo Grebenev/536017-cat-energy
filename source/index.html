@@ -113,11 +113,11 @@
             </picture>
           </div>
           <div class="slider__control">
-            <label class="slider__text" for="slider-before">Было</label>
+            <label class="slider__text" for="slider-before" aria-label="Фото до">Было</label>
             <div class="slider__toggler">
               <span class="slider__button slider__button--before"></span>
             </div>
-            <label class="slider__text" for="slider-after">Стало</label>
+            <label class="slider__text" for="slider-after" aria-label="Фото после">Стало</label>
           </div>
         </div>
       </section>
@@ -141,9 +141,9 @@
     </main>
     <footer class="footer">
       <div class="footer__wrapper">
-        <div class="footer__logo">
+        <a class="footer__logo">
           <img class="footer__image" src="img/logo-footer.svg" width="128" height="24" alt="Логотип">
-        </div>
+        </a>
         <section class="social footer__social">
           <h2 class="visually-hidden">Соцсети</h2>
           <ul class="social__list">
@@ -173,7 +173,7 @@
             </li>
           </ul>
         </section>
-        <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive">
+        <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="Переход на страницу Академии">
           <span class="footer__text">HTML Academy</span>
           <svg class="footer__icon" width="27" height="34">
             <use xlink:href="#htmlacademy"></use>
