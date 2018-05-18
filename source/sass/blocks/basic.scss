@@ -3,97 +3,104 @@
   flex-direction: column;
   justify-content: flex-start;
   min-height: 305px;
-  margin-bottom: 20px;
+  margin-bottom: 22px;
   padding-top: 20px;
-}
 
-.basic__slogan {
-  margin: 0;
-  margin-bottom: 20px;
-  padding: 5px 0;
-
-  @include font(14, 1);
-  color: $dark-3;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-.basic__image {
-  margin: 0 auto;
-}
-
-@media (max-width: $screen-tablet) { // <- 768
-  .basic {
-    height: 480px;
+  @media (max-width: 767px) {  // for mobile ONLY
+    min-height: 480px;
     background-image: $top-gradient;
 
     @include b-image("index-background-mobile@1x.jpg");
-    // background-size: cover;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("/img/index-background-mobile@2x.jpg");
+      background-size: 100% auto;
+    }
   }
 
-  .basic__title {
-    padding: 10px 0;
-    padding-bottom: 20px;
-    line-height: 1;
-    letter-spacing: -1px;
-    color: #ffffff;
-    text-align: center;
-  }
-
-  .basic__slogan {
-    color: #ffffff;
-    letter-spacing: -0.3px;
-  }
-}
-
-@media (min-width: $screen-tablet) { // 320 -> 768
-  .basic {
+  @media (min-width: $screen-tablet) {
     position: relative;
     justify-content: flex-start;
     align-items: flex-start;
-    min-height: 868px;
+    min-height: 864px;
     margin-bottom: 0;
-    padding-top: 60px;
+    padding-top: 56px;
     padding-bottom: 0;
     padding-left: 120px;
     padding-right: 120px;
   }
 
-  .basic__title {
+  @media (min-width: $screen-desktop) {
+
+    width: 1300px;
+    height: 550px;
+    margin: 0 auto;
+    padding-top: 104px;
+  }
+}
+
+.basic__title {
+  @media (max-width: 767px) {  // for mobile ONLY
+    padding: 9px 0;
+    padding-bottom: 18px;
+    line-height: 1;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  @media (min-width: $screen-tablet) {
     align-self: flex-start;
     width: 450px;
-    letter-spacing: -2.2px;
     margin-bottom: 35px;
   }
+}
 
-  .basic__slogan {
+.basic__slogan {
+  margin: 0;
+  margin-bottom: 24px;
+  padding: 5px 0;
+
+  @include font(14, 1);
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  @media (min-width: $screen-tablet) {
     @include font (20, 1);
-    letter-spacing: -0.5px;
     margin-bottom: 42px;
+    color: $dark-3;
   }
 
-  .basic__button {
-    order: 1;
-    width: auto;
-    padding-top: 14px;
-    padding-bottom: 14px;
-
-    @include font (20, 1);
+  @media (min-width: $screen-desktop) {
+    margin-bottom: 50px;
   }
+}
 
-  .basic__image {
+.basic__image {
+  margin: 0 auto;
+
+  @media (min-width: $screen-tablet) {
     position: absolute;
     bottom: 0;
     left: 30px;
     z-index: -1;
     order: 2;
   }
+
+  @media (min-width: $screen-desktop) {
+    top: 22px;
+    left: 489px;
+    z-index: 1;
+    margin: 0 auto;
+  }
 }
 
-@media (min-width: $screen-desktop) { // 1200 ->
-  .basic {
-    position: absolute;
-    width: 100%;
-    height: 550px;
+.basic__button {
+  @media (min-width: $screen-tablet) {
+    width: auto;
+    padding-top: 14px;
+    padding-bottom: 14px;
+
+    @include font (20, 1);
   }
 }

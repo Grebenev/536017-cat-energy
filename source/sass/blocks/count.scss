@@ -2,7 +2,10 @@
   @include font(24, 1);
   color: $dark-3;
   text-transform: uppercase;
-  letter-spacing: -1px;
+
+  @media (min-width: $screen-tablet) {
+    @include font (30, 37px);
+  }
 }
 
 .count__subtext {
@@ -15,32 +18,8 @@
   @include font(12, 1);
   font-family: "Arial", sans-serif;
   background-color: $grey-1;
-}
 
-.count__wrapper {
-  position: relative;
-  width: 123px;
-  margin-bottom: 35px;
-  padding: 15px 10px;
-  text-align: center;
-  border: 1px solid $grey-4;
-}
-
-@media (min-width: $screen-tablet) {
-  .count__wrapper {
-    width: 161px;
-    margin-bottom: 0;
-    margin-right: 45px;
-    // &:last-of-type {
-    //   // margin-right: 80px;
-    // };
-  }
-
-  .count__title {
-    @include font (30, 1.2);
-  }
-
-  .count__subtext {
+  @media (min-width: $screen-tablet) {
     top: 61px;
     left: 14px;
     width: 137px;
@@ -48,5 +27,24 @@
 
     @include font (14, 1);
     background-color: #ffffff;
+  }
+
+  @media (min-width: $screen-desktop) {
+    background-color: $grey-1;
+  }
+}
+
+.count__wrapper {
+  position: relative;
+  width: 123px;
+  margin-bottom: 34px;
+  padding: 15px 10px;
+  text-align: center;
+  border: 1px solid $grey-4;
+
+  @media (min-width: $screen-tablet) {
+    width: 161px;
+    margin-bottom: 0;
+    margin-right: 45px;
   }
 }

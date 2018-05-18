@@ -1,51 +1,69 @@
 .social__list {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
   margin: 0;
   padding-top: 22px;
   padding-bottom: 18px;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 55px;
+  padding-right: 63px;
   list-style: none;
   border-bottom: 1px solid $grey-3;
-}
 
-.social__item {
-  margin: 0 20px;
-}
-
-.social__link {
-  &--vk {
-    fill: #666666;
-    width: 22px;
-    height: 12px;
-  }
-
-  &--inst {
-    fill: #666666;
-    width: 17px;
-    height: 16px;
-  }
-
-  &--fb {
-    fill: #666666;
-    width: 10px;
-    height: 19px;
-  }
-}
-
-@media (min-width: $screen-tablet) {
-  .social__list {
-    margin-left: 30px;
+  @media (min-width: $screen-tablet) {
     padding: 0;
     border-bottom: 0;
   }
+}
 
-  .social__item {
-    margin: 0 17px;
+.social__item {
+  @media (min-width: $screen-tablet) {
+    margin-left: 25px;
+  }
+}
+
+.social__link {
+  display: block;
+
+  &:hover .social__svg {
+    fill: $green-2;
   }
 
-  .social__link {
-    transform: scale(1.47);
+  &:active .social__svg {
+    opacity: 0.3;
+  }
+}
+
+.social__svg {
+  fill: #666666;
+
+  &--vk {
+    width: 22px;
+    height: 12px;
+
+    @media (min-width: $screen-tablet) {
+      width: 30px;
+      height: 16px;
+    }
+  }
+
+  &--inst {
+    width: 17px;
+    height: 16px;
+
+    @media (min-width: $screen-tablet) {
+      width: 23px;
+      height: 23px;
+    }
+  }
+
+  &--fb {
+    width: 10px;
+    height: 19px;
+
+    @media (min-width: $screen-tablet) {
+      width: 14px;
+      height: 28px;
+    }
   }
 }

@@ -2,61 +2,89 @@
   background-color: $grey-1;
 }
 
+.footer__wrapper {
+  padding-left: $padding-mobile;
+  padding-right: $padding-mobile;
+
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    padding-left: $padding-tablet;
+    padding-right: $padding-tablet;
+  }
+
+  @media (min-width: $screen-desktop) {
+    width: $screen-desktop;
+    margin: 0  auto;
+    padding-left: $padding-desktop;
+    padding-right: $padding-desktop;
+  }
+}
+
 .footer__logo {
+  display: block;
   padding-top: 37px;
   padding-bottom: 28px;
   padding-left: 0;
   padding-right: 0;
   text-align: center;
   border-bottom: 1px solid $grey-3;
+
+  @media (min-width: $screen-tablet) {
+    padding: 0;
+    border: 0;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .footer__text {
   @include font(16, 1);
   font-family: "Arial", sans-serif;
+
+  @media (min-width: $screen-tablet) {
+    margin-right: 5px;
+  }
 }
 
 .footer__link {
   display: flex;
   justify-content: space-between;
-  align-item: center;
-  padding-top: 27px;
-  padding-bottom: 15px;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 22px;
   padding-left: 0;
   padding-right: 0;
+
+  &:hover .footer__icon {
+    fill: $green-2;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $screen-tablet) {
+    align-items: center;
+    padding: 0;
+  }
 }
 
 .footer__icon {
   width: 27px;
   height: 35px;
-  transform: scale(1.47);
-}
+  fill: #666666;
 
-@media (min-width: $screen-tablet) {
-  .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-top: 55px;
-    padding-bottom: 55px;
-  }
-
-  .footer__text {
-    margin-right: 5px;
-  }
-
-  .footer__link {
-    align-items: center;
-    padding: 0;
-  }
-
-  .footer__logo {
-    padding: 0;
-    border: 0;
-  }
-
-  .footer__icon {
+  @media (min-width: $screen-tablet) {
     margin-left: 20px;
-    transform: scale(1.47);
   }
 }

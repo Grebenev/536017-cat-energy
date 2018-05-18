@@ -1,18 +1,43 @@
 .button {
   display: inline-block;
   width: 100%;
-  padding: 11px;
+  padding: 10px;
   font: inherit;
+  font-size: 16px;
+  line-height: 20px;
   color: #ffffff;
-  letter-spacing: -0.4px;
   text-align: center;
   text-transform: uppercase;
   background-color: $green-2;
   border: none;
 
+  &:hover {
+    background-color: $green-3;
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
+
+  &--index {
+    @include font (14, 18px);
+
+    @media (min-width: $screen-tablet) {
+      @include font (20, 1);
+    }
+  }
+
   &--grey {
     color: $dark-1;
     background-color: $grey-1;
+
+    &:hover {
+      background-color: #ebebeb;
+    }
+
+    &:active {
+      color: rgba(68, 68, 68, 0.3);
+    }
   }
 }
 

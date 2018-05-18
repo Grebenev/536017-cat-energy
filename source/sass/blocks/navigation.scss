@@ -1,25 +1,115 @@
 .navigation {
-  position: relative;
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 $padding-tablet;
+    padding-top: 23px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    max-width: $screen-desktop;
+    margin: 0 auto;
+    padding-top: 4px;
+    padding-left: $padding-desktop;
+    padding-right: $padding-desktop;
+
+    &--wrapper {
+      padding-top: 55px;
+    }
+  }
 }
 
 .navigation__toggle {
   display: none;
+
+  @media (max-width: 767px) { // for mobile ONLY!
+    display: block;
+    width: 25px;
+    height: 20px;
+    padding: 0;
+    border: none;
+    background-color: #ffffff;
+    cursor: pointer;
+
+    @include b-image("icon-close.svg");
+
+    &--off {
+      background-image: url("/img/icon-mobile-menu.svg");
+    }
+  }
 }
 
 .navigation__logo {
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding-top: 13px;
   padding-bottom: 11px;
   padding-left: $padding-mobile;
   padding-right: $padding-mobile;
   border-bottom: 1px solid $grey-2;
+
+  @media (min-width: $screen-tablet) {
+    margin-right: 70px;
+    padding: 0;
+    border: 0;
+  }
 }
 
+.navigation__logo-link {
+  @media (min-width: $screen-desktop) {
+    &[href]:hover {
+      opacity: 0.8;
+    }
+
+    &[href]:active {
+      opacity: 0.6;
+    }
+  }
+}
+
+.navigation__icon {
+  width: 191px;
+  height: 38px;
+
+  @media (min-width: $screen-tablet) {
+    width: 173px;
+    height: 58px;
+  }
+
+  @media (min-width: $screen-desktop) {
+    width: 202px;
+    height: 60px;
+  }
+}
 
 .navigation__list {
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (max-width: 767px) {
+    &--off .navigation__item {
+      display: none;
+    }
+  }
+
+  @media (min-width: $screen-tablet) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  @media (min-width: $screen-desktop) {
+    &--white {
+      .navigation__link {
+        color: #ffffff;
+
+        &:not([href]) {
+          border-bottom: 2px solid #ffffff;
+        }
+      }
+    }
+  }
 }
 
 .navigation__item {
@@ -27,61 +117,8 @@
   text-align: center;
   color: $dark-3;
   border-bottom: 1px solid $grey-2;
-}
 
-.navigation__link {
-  @include font(20, 1, 500);
-  text-transform: uppercase;
-  letter-spacing: -0.5px;
-}
-
-@media (max-width: $screen-tablet) { //<768
-
-  .navigation__toggle {
-    position: absolute;
-    top: 23px;
-    right: 20px;
-    display: block;
-    width: 25px;
-    height: 20px;
-    border: none;
-    background-color: #ffffff;
-    cursor: pointer;
-  }
-
-  .navigation__list {
-    &--closed .navigation__item {
-      display: none;
-    }
-
-    &--closed .navigation__toggle {
-      @include b-image("icon-mobile-menu.svg");
-    }
-
-    &--opened .navigation__toggle {
-      @include b-image("icon-close.svg");
-    }
-  }
-}
-
-@media (min-width: $screen-tablet) { //768 >
-  .navigation {
-    display: flex;
-    justify-content: space-between;
-    padding: 0 $padding-tablet;
-    padding-top: 22px;
-  }
-
-  .navigation__logo {
-    padding: 0;
-    border: 0;
-  }
-
-  .navigation__list {
-    display: flex;
-  }
-
-  .navigation__item {
+  @media (min-width: $screen-tablet) {
     padding: 0;
     padding-top: 20px;
     border: 0;
@@ -90,10 +127,22 @@
       margin-right: 35px;
     }
   }
+}
 
-  .navigation__link {
+.navigation__link {
+  @include font(20, 1, 500);
+  text-transform: uppercase;
+
+  &[href]:hover {
+    opacity: 0.6;
+  }
+
+  &[href]:active {
+    opacity: 0.3;
+  }
+
+  @media (min-width: $screen-tablet) {
     display: block;
-    // padding: 7px 0;
     padding-top: 0;
     padding-bottom: 7px;
     padding-left: 0;
@@ -106,26 +155,8 @@
       border-bottom: 2px solid $green-2;
     }
   }
-}
 
-@media (min-width: $screen-desktop) { //1300 >
-  .navigation {
-    padding-top: 4px;
-  }
-
-  .navigation__list {
-    &--white {
-      .navigation__link {
-        color: #ffffff;
-
-        &:not([href]) {
-          border-bottom: 2px solid #ffffff;
-        }
-      }
-    }
-  }
-
-  .navigation__link {
+  @media (min-width: $screen-desktop) {
     @include font(20, 1.25);
   }
 }
