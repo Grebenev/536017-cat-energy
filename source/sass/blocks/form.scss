@@ -126,6 +126,15 @@
   }
 }
 
+.form__input:focus + .form__icon {
+  fill: $green-2;
+}
+
+.form__input:focus:invalid + .form__icon {
+  fill: $red-1;
+}
+
+
 .form__icon {
   position: absolute;
   top: 17px;
@@ -136,14 +145,6 @@
     top: 19px;
     right: 20px;
   }
-}
-
-.form__input:focus + .form__icon {
-  fill: $green-2;
-}
-
-.form__input:focus:invalid + .form__icon {
-  fill: $red-1;
 }
 
 .form__radio {
