@@ -121,8 +121,8 @@
     box-shadow: inset 0 0 0 2px $dark-1;
   }
 
-  &:invalid {
-    box-shadow: inset 0 0 0 2px red;
+  &:focus:invalid {
+    box-shadow: inset 0 0 0 2px #ff8282;
   }
 }
 
@@ -233,7 +233,7 @@
   }
 
   &--program {
-    margin-bottom: 15px;
+    margin-bottom: 13px;
     padding-top: 18px;
     padding-bottom: 20px;
     border: solid 1px rgba($grey-4, 0.5);
@@ -470,7 +470,7 @@ input {
 .form__required {
   display: block;
   padding-top: 20px;
-  padding-bottom: 30px;
+  padding-bottom: 33px;
   font-family: "Arial", sans-serif;
   text-align: center;
   color: $dark-1;
