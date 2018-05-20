@@ -121,7 +121,7 @@
     box-shadow: inset 0 0 0 2px $dark-1;
   }
 
-  &:focus:invalid {
+  &:invalid {
     box-shadow: inset 0 0 0 2px #ff8282;
   }
 }
