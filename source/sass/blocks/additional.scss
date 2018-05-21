@@ -1,5 +1,5 @@
 .additional {
-  margin-bottom: 35px;
+  margin-bottom: 38px;
 
   @media (min-width: $screen-tablet) {
     margin-bottom: 77px;
@@ -14,13 +14,13 @@
 
 .additional__title {
   padding-top: 30px;
-  padding-bottom: 33px;
+  padding-bottom: 30px;
   padding-right: 20px;
   padding-left: $padding-mobile;
 
   @media (min-width: $screen-tablet) {
     margin-left: 30px;
-    margin-top: 65px;
+    margin-top: 70px;
     margin-bottom: 80px;
     padding: 0;
     padding-right: 40px;
@@ -29,7 +29,7 @@
 
   @media (min-width: $screen-desktop) {
     margin-left: 5px;
-    margin-top: 75px;
+    margin-top: 78px;
   }
 }
 
@@ -44,7 +44,7 @@
   padding: 0;
   padding-left: $padding-mobile;
   padding-right: $padding-mobile;
-  margin-bottom: 41px;
+  margin-bottom: 39px;
   list-style: none;
 
   @media (min-width: $screen-tablet) {
@@ -94,7 +94,7 @@
 .additional__product {
   width: 100%;
   margin-top: 15px;
-  margin-bottom: 12px;
+  margin-bottom: 11px;
   margin-left: 0;
   margin-right: 0;
 

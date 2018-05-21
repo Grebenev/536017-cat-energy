@@ -50,12 +50,12 @@
           <ul class="form__list form__list--cat-data">
             <li class="form__item">
               <label class="form__label form__label--name">Имя:*
-                <input class="form__input form__input--name" type="text" name="name" placeholder="Барсик" required>
+                <input class="form__input form__input--name" type="text" name="name" placeholder="Барсик">
               </label>
             </li>
             <li class="form__item">
               <label class="form__label form__label-weight">Вес (кг):*
-                <input class="form__input form__input--weight" type="text" name="weight" placeholder="7" required>
+                <input class="form__input form__input--weight" type="text" name="weight" placeholder="7">
               </label>
             </li>
             <li class="form__item">
@@ -87,13 +87,13 @@
           <h2 class="form__title title title--stripe">Контактные данные<br><span> (владельца кота)</span></h2>
           <div class="form__wrapper form__wrapper--owner-data">
             <label class="form__label">E-mail:*
-              <input class="form__input form__input--mail" type="email" name="email" placeholder="kuklachev@gmail.com" required>
+              <input class="form__input form__input--mail" type="email" name="email" placeholder="kuklachev@gmail.com">
               <svg class="form__icon" width="17" height="13">
                 <use xlink:href="#mail"></use>
               </svg>
             </label>
             <label class="form__label">Телефон:*
-              <input class="form__input form__input--phone" type="tel" name="phone" placeholder="8 (960) 900-60-90" required>
+              <input class="form__input form__input--phone" type="tel" name="phone" pattern="^[ 0-9]+$" placeholder="8 (960) 900-60-90">
               <svg class="form__icon" width="20" height="20">
                 <use xlink:href="#phone"></use>
               </svg>
@@ -148,6 +148,9 @@
         </div>
         <div class="map__area">
           <picture>
+            <source type="image/webp" media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
+            <source type="image/webp" media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.webp 1x, img/bg-map-tablet@2x.webp 2x">
+            <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
             <source media="(min-width: 1300px)" srcset="img/bg-map-desktop@1x.png, img/bg-map-desktop@2x.png 2x">
             <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.png, img/bg-map-tablet@2x.png 2x">
             <img class="map__static" src="img/bg-map-mobile@1x.png" srcset="img/bg-map-mobile@2x.png 2x" alt="Схема проезда ул. Большая Конюшенная, д. 19/8 Санкт-Петербург">
