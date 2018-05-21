@@ -39,6 +39,12 @@
   list-style: none;
   font-family: "Arial", sans-serif;
 
+  @media (max-width: 767px) {
+    br {
+      display: none;
+    }
+  }
+
   @media (min-width: $screen-tablet) {
     position: relative;
     display: block;
@@ -84,21 +90,6 @@
     }
   }
 
-  &::after {
-    @media (min-width: $screen-tablet) {
-      content: counter(counter);
-      position: absolute;
-      display: block;
-      top: -30px;
-      left: 102px;
-      z-index: -1;
-
-      @include font (282, 1);
-      font-family: "Oswald", "Arial", sans-serif;
-      color: $grey-1;
-    }
-  }
-
   &:nth-child(1)::before {
     @include b-image ("advantage-leaf@1x.png", $green-2,  center);
 
@@ -128,6 +119,27 @@
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: url("/img/advantage-clock@2x.png");
+    }
+  }
+
+  &::after {
+    @media (min-width: $screen-tablet) {
+      content: counter(counter);
+      position: absolute;
+      display: block;
+      top: -30px;
+      left: 102px;
+      z-index: -1;
+
+      @include font (282, 1);
+      font-family: "Oswald", "Arial", sans-serif;
+      color: $grey-1;
+    }
+  }
+
+  &:not(:first-child):after {
+    @media (min-width: $screen-tablet) {
+      left: 112px;
     }
   }
 }

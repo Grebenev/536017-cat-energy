@@ -48,7 +48,7 @@
   font-family: "Arial", sans-serif;
 
   @media (min-width: $screen-tablet) {
-    @include font (16, 1.5);
+    width: 680px;
     margin-bottom: 54px;
   }
 
