@@ -137,7 +137,7 @@
     }
   }
 
-  &:not(:first-child):after {
+  &:not(:first-child)::after {
     @media (min-width: $screen-tablet) {
       left: 112px;
     }
