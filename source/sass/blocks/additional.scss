@@ -73,6 +73,10 @@
   border-bottom: 1px solid $grey-4;
   border-top: 1px solid $grey-4;
 
+  &:not(:last-child) {
+    border-bottom-color: transparent ;
+  }
+
   @media (min-width: $screen-tablet) {
     justify-content: flex-start;
     align-items: baseline;
@@ -88,6 +92,8 @@
   @media (min-width: $screen-desktop) {
     flex-wrap: wrap;
     padding: 16px 0;
+    border-left-color: transparent;
+    border-right-color: transparent;
   }
 }
 
