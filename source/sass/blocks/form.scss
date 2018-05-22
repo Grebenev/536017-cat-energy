@@ -374,11 +374,16 @@ input {
   padding-left: 20px;
   text-align: left;
 
+  @media (max-width: $screen-tablet) { // for mobilt ONLY!
+    span {
+      display: block;
+    }
+  }
+
   @media (min-width: $screen-tablet) {
     &:not(:first-child) {
       margin-left: 30px;
       padding-left: 40px;
-      // margin-left: 40px;
     }
 
     &:nth-of-type(2) {
@@ -399,10 +404,6 @@ input {
     padding-left: 30px;
     padding-right: 40px;
     margin-bottom: 30px;
-
-    br {
-      display: none;
-    }
   }
 
   @media (min-width: $screen-desktop) {

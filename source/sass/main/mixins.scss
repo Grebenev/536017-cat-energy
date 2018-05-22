@@ -7,7 +7,7 @@
 //Картинка фоном ("name.jpg", #ffffff, 0 0, no-repeat)
 @mixin b-image ($image-url: "name.jpg", $image-color: #ffffff, $image-position: 0 0, $image-repeat: no-repeat) {
   background-color: $image-color;
-  background-image: url("/img/"+ $image-url);
+  background-image: url("../img/"+ $image-url);
   background-position: $image-position;
   background-repeat: $image-repeat;
 }

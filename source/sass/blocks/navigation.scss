@@ -34,7 +34,7 @@
     @include b-image("icon-close.svg");
 
     &--off {
-      background-image: url("/img/icon-mobile-menu.svg");
+      background-image: url("../img/icon-mobile-menu.svg");
     }
   }
 }
