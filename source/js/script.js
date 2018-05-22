@@ -2,6 +2,8 @@ var body = document.querySelector("body");
 var nav = document.querySelector(".navigation");
 var navToggle = nav.querySelector(".navigation__toggle");
 var navList = nav.querySelector(".navigation__list");
+var ScreenTablet = 768;
+var ScreenDeskop = 1300;
 
 body.classList.remove("no-js");
 body.classList.add("js");
@@ -18,10 +20,14 @@ navToggle.addEventListener("click", function (evt) {
 function initialize() {
   var mapOptions = {
     zoom: 17,
-    center: new google.maps.LatLng(((screen.width < 1300) ? 59.93877121663107 : 59.939075), ((screen.width < 1300) ? 30.323274149999975 : 30.31965))
+    center: new google.maps.LatLng(((screen.width < ScreenDeskop) ? 59.93877121663107 : 59.939075), ((screen.width < ScreenDeskop) ? 30.323274149999975 : 30.31965))
   };
   var map = new google.maps.Map(document.getElementById("mapid"), mapOptions);
-  var image = "img/map-pin.png";
+  if(window.screen.width <= ScreenTablet) {
+    var image = "img/map-small-pin.png";
+  } else {
+    var image = "img/map-pin.png";
+  }
   var myLatLng = new google.maps.LatLng(59.93877121663107, 30.323274149999975);
   var beachMarker = new google.maps.Marker({
     position: myLatLng,
