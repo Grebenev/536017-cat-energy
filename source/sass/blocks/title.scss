@@ -39,4 +39,10 @@
       margin-left: 0;
     }
   }
+
+  &--stripe-up::after {
+    @media (max-width: 767px) {
+      transform: translateY(-37px);
+    }
+  }
 }
