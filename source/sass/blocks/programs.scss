@@ -34,6 +34,10 @@
     padding-bottom: 57px;
     padding-left: 52px;
     margin-bottom: 30px;
+
+    &:last-child .programs__description{
+      width: 345px;
+    }
   }
 
   @media (min-width: $screen-desktop) {
@@ -43,6 +47,10 @@
     padding-right: 55px;
     padding-bottom: 60px;
     padding-left: 52px;
+
+    &:last-child .programs__description{
+      width: auto;
+    }
   }
 }
 
@@ -148,15 +156,15 @@
   font-family: "Arial", sans-serif;
   border-bottom: 1px solid $grey-3;
 
-  @media (max-width: 767px) { // for mobile ONLY
-    br {
-      display: none;
+  @media (min-width: $screen-tablet) {
+    span {
+      display: block;
     }
   }
 
   @media (min-width: $screen-desktop) {
-    br {
-      display: none;
+    span {
+      display: inline;
     }
   }
 

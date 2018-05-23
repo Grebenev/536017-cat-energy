@@ -228,7 +228,7 @@
       width: 47%;
       margin: 0;
       padding: 0;
-      margin-right: 75px;
+      margin-right: 80px;
       padding-left: $padding-desktop;
     }
   }
@@ -378,7 +378,7 @@ input {
   padding-left: 20px;
   text-align: left;
 
-  @media (max-width: $screen-tablet) { // for mobilt ONLY!
+  @media (max-width: 767px) { // for mobilt ONLY!
     span {
       display: block;
     }

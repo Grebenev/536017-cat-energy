@@ -20,23 +20,26 @@ var smallPin = {width: 62, height: 53};
 
 function initMap() {
   if(document.body.clientWidth < 768) {
-    var mapCenter = {lat: 59.938800, lng: 30.323200};
+    var mapCenter = {lat: 59.938840, lng: 30.323200};
     var pinCenter = {lat: 59.938800, lng: 30.323200};
     var iconSize = smallPin;
+    var Zoom = 16.7;
 
   } else if (document.body.clientWidth >= 768 && document.body.clientWidth < 1300) {
-    var mapCenter = {lat: 59.938800, lng: 30.323200};
-    var pinCenter = {lat: 59.938800, lng: 30.323200};
+    var mapCenter = {lat: 59.938960, lng: 30.323120};
+    var pinCenter = {lat: 59.938770, lng: 30.323100};
     var iconSize = bigPin;
+    var Zoom = 17.5;
 
   } else if (document.body.clientWidth >= 1300) {
-    var mapCenter = {lat: 59.939065, lng: 30.319335};
+    var mapCenter = {lat: 59.939065, lng: 30.319500};
     var pinCenter = {lat: 59.938800, lng: 30.323200};
     var iconSize = bigPin;
+    var Zoom = 17;
   }
 
   var map = new google.maps.Map(document.getElementById('mapid'), {
-    zoom: 17,
+    zoom: Zoom,
     center: mapCenter
   });
 
