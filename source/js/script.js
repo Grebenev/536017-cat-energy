@@ -15,18 +15,76 @@ navToggle.addEventListener("click", function (evt) {
   navList.classList.toggle("navigation__list--off");
 });
 
-function initialize() {
-  var mapOptions = {
-    zoom: 17,
-    center: new google.maps.LatLng(((screen.width < 1300) ? 59.93877121663107 : 59.939075), ((screen.width < 1300) ? 30.323274149999975 : 30.31965))
-  };
-  var map = new google.maps.Map(document.getElementById("mapid"), mapOptions);
-  var image = "img/map-pin.png";
-  var myLatLng = new google.maps.LatLng(59.93877121663107, 30.323274149999975);
-  var beachMarker = new google.maps.Marker({
-    position: myLatLng,
+var bigPin = {width: 124, height: 106};
+var smallPin = {width: 62, height: 53};
+
+function initMap() {
+  if(document.body.clientWidth < 768) {
+    var mapCenter = {lat: 59.938840, lng: 30.323200};
+    var pinCenter = {lat: 59.938800, lng: 30.323200};
+    var iconSize = smallPin;
+    var Zoom = 16.7;
+
+  } else if (document.body.clientWidth >= 768 && document.body.clientWidth < 1300) {
+    var mapCenter = {lat: 59.938960, lng: 30.323120};
+    var pinCenter = {lat: 59.938770, lng: 30.323100};
+    var iconSize = bigPin;
+    var Zoom = 17.5;
+
+  } else if (document.body.clientWidth >= 1300) {
+    var mapCenter = {lat: 59.939065, lng: 30.319500};
+    var pinCenter = {lat: 59.938800, lng: 30.323200};
+    var iconSize = bigPin;
+    var Zoom = 17;
+  }
+
+  var map = new google.maps.Map(document.getElementById('mapid'), {
+    zoom: Zoom,
+    center: mapCenter
+  });
+
+  var image = new google.maps.MarkerImage(
+    'img/map-pin.png',
+    null,
+    null,
+    null,
+    iconSize
+  );
+
+  var marker = new google.maps.Marker({
+    position: pinCenter,
     map: map,
     icon: image
   });
+
+  google.maps.event.addDomListener(window, 'resize', function() {
+    if(document.body.clientWidth >= 768) {
+      marker.setIcon(
+        new google.maps.MarkerImage(
+          marker.getIcon().url,
+          null,
+          null,
+          null,
+          bigPin
+        )
+      );
+    } else {
+      marker.setIcon(
+        new google.maps.MarkerImage(
+          marker.getIcon().url,
+          null,
+          null,
+          null,
+          smallPin
+        )
+      );
+    }
+
+    if(document.body.clientWidth >= 1300) {
+      map.setCenter(new google.maps.LatLng(59.939065, 30.319335));
+    } else {
+      map.setCenter(new google.maps.LatLng(59.938800, 30.323200));
+    }
+  });
 }
-google.maps.event.addDomListener(window, "load", initialize);
+google.maps.event.addDomListener(window, "load", initMap);

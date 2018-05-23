@@ -36,10 +36,13 @@
 
     @media (min-width: $screen-tablet) {
       left: 0;
+      margin-left: 0;
     }
   }
 
-  // &--stripe:nth-of-type(1)::after {
-  //   transform: translateY(-37px);
-  // }
+  &--stripe-up::after {
+    @media (max-width: 767px) {
+      transform: translateY(-37px);
+    }
+  }
 }

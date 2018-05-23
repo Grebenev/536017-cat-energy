@@ -39,6 +39,12 @@
   list-style: none;
   font-family: "Arial", sans-serif;
 
+  @media (max-width: 767px) {
+    br {
+      display: none;
+    }
+  }
+
   @media (min-width: $screen-tablet) {
     position: relative;
     display: block;
@@ -84,6 +90,38 @@
     }
   }
 
+  &:nth-child(1)::before {
+    @include b-image ("advantage-leaf@1x.png", $green-2,  center);
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-leaf@2x.png");
+    }
+  }
+
+  &:nth-child(2)::before {
+    @include b-image ("advantage-powder@1x.png", $green-2, center);
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-powder@2x.png");
+    }
+  }
+
+  &:nth-child(3)::before {
+    @include b-image ("advantage-dining@1x.png", $green-2,  center);
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-dining@2x.png");
+    }
+  }
+
+  &:nth-child(4)::before {
+    @include b-image ("advantage-clock@1x.png", $green-2, center);
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/advantage-clock@2x.png");
+    }
+  }
+
   &::after {
     @media (min-width: $screen-tablet) {
       content: counter(counter);
@@ -99,35 +137,9 @@
     }
   }
 
-  &:nth-child(1)::before {
-    @include b-image ("advantage-leaf@1x.png", $green-2,  center);
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("/img/advantage-leaf@2x.png");
-    }
-  }
-
-  &:nth-child(2)::before {
-    @include b-image ("advantage-powder@1x.png", $green-2, center);
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("/img/advantage-powder@2x.png");
-    }
-  }
-
-  &:nth-child(3)::before {
-    @include b-image ("advantage-dining@1x.png", $green-2,  center);
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("/img/advantage-dining@2x.png");
-    }
-  }
-
-  &:nth-child(4)::before {
-    @include b-image ("advantage-clock@1x.png", $green-2, center);
-
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("/img/advantage-clock@2x.png");
+  &:not(:first-child)::after {
+    @media (min-width: $screen-tablet) {
+      left: 112px;
     }
   }
 }
