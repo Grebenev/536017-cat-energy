@@ -19,15 +19,14 @@
 
   @media (min-width: $screen-tablet) {
     top: 540px;
-    left: 50%;
-    transform: translateX(-284px);
+    margin-left: -178px;
     width: 570px;
   }
 
   @media (min-width: $screen-desktop) {
     justify-content: flex-end;
     top: 560px;
-    left: 53%;
+    margin-left: -160px;
   }
 }
 
