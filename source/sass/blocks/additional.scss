@@ -80,11 +80,11 @@
   @media (min-width: $screen-tablet) {
     justify-content: flex-start;
     align-items: baseline;
+    margin-bottom: 0;
     padding-top: 26px;
     padding-bottom: 28px;
     padding-left: 38px;
     padding-right: 37px;
-    margin-bottom: 0;
     border-bottom: 0;
     border: 1px solid $grey-2;
   }

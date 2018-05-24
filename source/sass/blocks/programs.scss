@@ -13,8 +13,8 @@
 }
 
 .programs__list {
-  padding: 0;
   margin: 0;
+  padding: 0;
   list-style: none;
 
   @media (min-width: $screen-desktop) {
@@ -29,11 +29,11 @@
   margin-bottom: 20px;
 
   @media (min-width: $screen-tablet) {
+    margin-bottom: 30px;
     padding-top: 77px;
     padding-right: 60px;
     padding-bottom: 57px;
     padding-left: 52px;
-    margin-bottom: 30px;
 
     &:last-child .programs__description {
       width: 345px;
@@ -64,9 +64,10 @@
 
 
   @include font(24, 1.54);
+  margin-bottom: 29px;
   color: $dark-3;
   text-transform: uppercase;
-  margin-bottom: 29px;
+
 
   @media (min-width: $screen-tablet) {
     width: 380px;
@@ -197,8 +198,8 @@
     position: relative;
     width: 23px;
     height: 11px;
-    vertical-align: middle;
     margin-left: 13px;
+    vertical-align: middle;
 
     @include b-image("icon-right-arrow-long.svg", transparent);
 
