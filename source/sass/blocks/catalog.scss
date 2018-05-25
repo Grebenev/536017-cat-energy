@@ -4,9 +4,9 @@
   }
 
   @media (min-width: $screen-desktop) {
+    margin: 0 auto;
     padding: 0 $padding-desktop;
     max-width: 1300px;
-    margin: 0 auto;
   }
 }
 
@@ -43,12 +43,12 @@
 }
 
 .catalog__product {
+  width: 60%;
   margin: 0;
   padding-top: 23px;
   padding-bottom: 11px;
   padding-left: 0;
   padding-right: 0;
-  width: 60%;
 
   @include font(16, 1.25);
   color: $dark-3;
@@ -57,9 +57,9 @@
   @media (min-width: $screen-tablet) {
     width: auto;
     max-width: 150px;
-    padding: 0;
     margin: 0 auto;
     margin-bottom: 20px;
+    padding: 0;
 
     @include font (20, 1);
   }
@@ -76,9 +76,9 @@
   border-bottom: 1px solid $grey-2;
 
   &:last-child .catalog__product {
-    padding: 0;
-    margin-bottom: 5px;
     width: 100%;
+    margin-bottom: 5px;
+    padding: 0;
     text-align: center;
 
     @media (min-width: $screen-tablet) {
@@ -88,15 +88,16 @@
 
   &:last-child .catalog__cell {
     width: 100%;
-    text-align: center;
     margin-bottom: 23px;
+    text-align: center;
+
 
     @media (min-width: $screen-tablet) {
       max-width: 170px;
-      padding-top: 22px;
-      padding-bottom: 27px;
       margin: 0 auto;
       margin-bottom: 58px;
+      padding-top: 22px;
+      padding-bottom: 27px;
     }
 
     @media (min-width: $screen-desktop) {
@@ -236,6 +237,10 @@
       width: 324px;
       height: auto;
       flex-shrink: 0;
+    }
+
+    @media (min-width: $screen-desktop) {
+      width: 245px;
     }
   }
 }

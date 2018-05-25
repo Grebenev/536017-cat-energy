@@ -38,13 +38,13 @@ function initMap() {
     var Zoom = 17;
   }
 
-  var map = new google.maps.Map(document.getElementById('mapid'), {
+  var map = new google.maps.Map(document.getElementById("mapid"), {
     zoom: Zoom,
     center: mapCenter
   });
 
   var image = new google.maps.MarkerImage(
-    'img/map-pin.png',
+    "img/map-pin.png",
     null,
     null,
     null,
@@ -57,7 +57,7 @@ function initMap() {
     icon: image
   });
 
-  google.maps.event.addDomListener(window, 'resize', function() {
+  google.maps.event.addDomListener(window, "resize", function() {
     if(document.body.clientWidth >= 768) {
       marker.setIcon(
         new google.maps.MarkerImage(

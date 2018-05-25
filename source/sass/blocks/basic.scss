@@ -34,7 +34,6 @@
 
     width: 1300px;
     min-height: 550px;
-    // height: 550px;
     margin: 0 auto;
     padding-top: 104px;
   }
@@ -67,8 +66,9 @@
   color: #ffffff;
 
   @media (min-width: $screen-tablet) {
-    @include font (20, 1);
     margin-bottom: 42px;
+
+    @include font (20, 1);
     color: $dark-3;
   }
 

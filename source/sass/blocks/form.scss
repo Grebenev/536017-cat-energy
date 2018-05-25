@@ -137,7 +137,7 @@
 
 .form__icon {
   position: absolute;
-  top: 17px;
+  top: 14px;
   right: 15px;
   fill: $dark-2;
 
@@ -224,12 +224,12 @@
 
     @media (min-width: $screen-desktop) {
       display: inline-block;
-      vertical-align: middle;
       width: 47%;
       margin: 0;
-      padding: 0;
       margin-right: 80px;
+      padding: 0;
       padding-left: $padding-desktop;
+      vertical-align: middle;
     }
   }
 
@@ -249,10 +249,10 @@
 
     @media (min-width: $screen-desktop) {
       display: inline-block;
-      vertical-align: middle;
       width: 44%;
       margin: 0;
       padding: 25px;
+      vertical-align: middle;
     }
   }
 
@@ -443,9 +443,9 @@ input {
 
     @media (min-width: $screen-desktop) {
       display: flex;
+      justify-content: space-between;
       padding-left: $padding-desktop;
       padding-right: $padding-desktop;
-      justify-content: space-between;
     }
   }
 

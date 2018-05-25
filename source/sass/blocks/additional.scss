@@ -80,11 +80,11 @@
   @media (min-width: $screen-tablet) {
     justify-content: flex-start;
     align-items: baseline;
+    margin-bottom: 0;
     padding-top: 26px;
     padding-bottom: 28px;
     padding-left: 38px;
     padding-right: 37px;
-    margin-bottom: 0;
     border-bottom: 0;
     border: 1px solid $grey-2;
   }
@@ -157,9 +157,8 @@
   position: relative;
   display: flex;
   align-items: flex-end;
-  min-height: 289px;
-  margin: 0;
-  padding-top: 65px;
+  margin-top: auto;
+  padding-top: 189px;
   padding-bottom: 40px;
   padding-left: 55px;
   padding-right: 55px;
@@ -178,6 +177,7 @@
 
   @media (min-width: $screen-tablet) {
     min-height: 200px;
+    padding-top: 63px;
     padding-right: 118px;
     padding-bottom: 61px;
 
@@ -203,8 +203,7 @@
 
   @media (min-width: $screen-desktop) {
     width: 245px;
-    min-height: 290px;
-    padding-top: 65px;
+    padding-top: 185px;
     padding-right: 30px;
     padding-bottom: 45px;
     padding-left: 40px;
