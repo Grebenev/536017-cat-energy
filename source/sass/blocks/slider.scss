@@ -19,15 +19,14 @@
 
   @media (min-width: $screen-tablet) {
     top: 540px;
-    left: 57px;
-    // margin-left: -178px;
-    // width: 500px;
+    left: 100px;
+    width: 570px;
   }
 
   @media (min-width: $screen-desktop) {
     justify-content: flex-end;
     top: 560px;
-    margin-left: -160px;
+    left: 83px;
   }
 }
 
@@ -122,7 +121,6 @@
   @media (min-width: $screen-tablet) {
     position: absolute;
     overflow: hidden;
-    width: 345px;
   }
 
   @media (min-width: $screen-desktop) {
@@ -130,14 +128,16 @@
   }
 
   &--before {
+      box-shadow: inset 0 0 2px green;
     @media (min-width: $screen-tablet) {
       left: 50%;
       z-index: 1;
       transform: translateX(-345px);
+      width: 345px;
     }
 
     @media (min-width: $screen-desktop) {
-      width: 365px;
+     width: 345px;
     }
   }
 
@@ -145,9 +145,11 @@
     display: none;
 
     @media (min-width: $screen-tablet) {
+      box-shadow: inset 0 0 5px blue;
       display: block;
       right: 50%;
-      transform: translateX(345px);
+      transform: translateX(325px);
+      width: 325px;
     }
   }
 }
