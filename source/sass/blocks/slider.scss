@@ -7,20 +7,21 @@
 }
 
 .slider__control {
+
   position: absolute;
   top: 272px;
-  left: 50%;
+  left: 57px;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 210px;
-  transform: translateX(-105px);
   padding: 0;
 
   @media (min-width: $screen-tablet) {
     top: 540px;
-    margin-left: -178px;
-    width: 570px;
+    left: 57px;
+    // margin-left: -178px;
+    // width: 500px;
   }
 
   @media (min-width: $screen-desktop) {
